@@ -1,26 +1,16 @@
-﻿#############
-## Idea
-#############
-target/
-.idea/
-.idea
-.repository/
-*.iml
-*.iws
-*.jrtc
-*.java
-*.class
-*.info
-*.properties
-*.jar
+﻿.gradle
+/build/
 
-/1.JavaSyntax/
-/2.JavaCore/
-/3.JavaMultithreading/
-/4.JavaCollections/
-/5.OnlineInternship/
-/out/
-/JavaRushPlugin.properties
-/Instruction.png
-/out.log
-/out.log.*
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+.idea/workspace.xml
+
