@@ -10,9 +10,9 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код change
-        String GIT = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
-        String GI = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
-        String G = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
+        String GIT123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
+        String GI123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
+        String G123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
 
     }
 }
