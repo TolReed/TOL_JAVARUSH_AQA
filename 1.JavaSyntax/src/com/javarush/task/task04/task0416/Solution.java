@@ -10,6 +10,21 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        double t = Double.parseDouble(reader.readLine());
+
+        t = t % 5;
+
+        if (t >= 0 && t < 3) {
+            System.out.println("зелёный");
+        }
+        else if (t >= 3 && t < 4) {
+            System.out.println("жёлтый");
+        }
+        else if (t >= 4 && t < 5) {
+            System.out.println("красный");
+        }
+
 
     }
 }

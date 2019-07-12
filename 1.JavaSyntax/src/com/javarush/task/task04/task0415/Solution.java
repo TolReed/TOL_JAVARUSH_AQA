@@ -9,10 +9,17 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код change
-        String GIT123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
-        String GI123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
-        String G123 = new String ("WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT");
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(reader.readLine());
+        int b = Integer.parseInt(reader.readLine());
+        int c = Integer.parseInt(reader.readLine());
+
+        if ( (a+b) > c && (a+c) > b && (b+c) > a ) {
+            System.out.println("Треугольник существует." );
+        } else {
+            System.out.println("Треугольник не существует." );
+        }
 
     }
 }
