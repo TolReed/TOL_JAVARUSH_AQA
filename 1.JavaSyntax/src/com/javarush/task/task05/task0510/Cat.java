@@ -47,8 +47,7 @@ public class Cat {
         this.weight = weight;
         this.color = color;
         this.address = address;
-        int a = 10;
-        this.age = a;
+        this.age = 123;
     }
 
     public static void main(String[] args) {
