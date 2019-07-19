@@ -17,3 +17,5 @@ gradle-app.setting
 out.log
 out.log
 JavaRushPlugin.properties
+JavaRushPlugin.properties
+out.log
