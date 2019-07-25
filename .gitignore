@@ -22,3 +22,4 @@ out.log
 JavaRushPlugin.properties
 JavaRushPlugin.properties
 *.properties
+.idea/modules.xml
