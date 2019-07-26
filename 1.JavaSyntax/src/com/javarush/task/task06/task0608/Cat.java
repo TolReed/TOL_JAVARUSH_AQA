@@ -13,15 +13,20 @@ public class Cat {
 
     public static int getCatCount() {
         //напишите тут ваш код
+        return catCount;
 
     }
 
-    public static void setCatCount(int catCount) {
+    public static void setCatCount(int n) {
         //напишите тут ваш код
+        catCount = n;
 
     }
 
     public static void main(String[] args) {
+        //System.out.println(getCatCount());
+        //setCatCount(123);
+        //System.out.println(getCatCount());
 
     }
 }

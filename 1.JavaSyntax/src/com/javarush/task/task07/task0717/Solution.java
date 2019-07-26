@@ -12,7 +12,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         // Считать строки с консоли и объявить ArrayList list тут
 
-        ArrayList<String> result = doubleValues(list);
+        //ArrayList<String> result = doubleValues(list);
 
         // Вывести на экран result
     }

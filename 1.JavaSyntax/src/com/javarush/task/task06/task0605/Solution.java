@@ -20,6 +20,19 @@ public class Solution {
     public static class Body {
         public static void calculateMassIndex(double weight, double height) {
             // напишите тут ваш код
+            double IndexBody = weight / (height * height);
+
+            if (weight != 0 && height != 0) {
+                if (IndexBody < 18.5) {
+                    System.out.println("Недовес: меньше чем 18.5");
+                } else if (IndexBody > 18.5 && IndexBody < 25) {
+                    System.out.println("Нормальный: между 18.5 и 25");
+                } else if (IndexBody > 25 && IndexBody < 30) {
+                    System.out.println("Избыточный вес: между 25 и 30");
+                } else if (IndexBody > 30) {
+                    System.out.println("Ожирение: 30 или больше");
+                }
+            }
         }
     }
 }
