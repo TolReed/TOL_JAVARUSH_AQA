@@ -79,7 +79,7 @@ public class Solution {
 }
 
 
-/********************************** not WORKING!!!!!!!!!! aaaaaaaaaaaaaaaaaaaaa KURVA
+/********************************** not WORKING!!!!!!!!!! aaaaaaaaaaaaaaaaaaaaa REDISKA
  BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
  String GrandPaName = reader.readLine();
