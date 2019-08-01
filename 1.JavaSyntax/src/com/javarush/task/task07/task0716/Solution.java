@@ -21,6 +21,44 @@ public class Solution {
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
-        return null;
+        boolean isContainR;
+        boolean isContainL;
+
+        for (int i = 0; i < strings.size();) {
+            isContainR = strings.get(i).contains("р");
+            isContainL = strings.get(i).contains("л");
+            if (isContainR && !isContainL) {
+                strings.remove(i);
+            } else if (isContainL && !isContainR) {
+                strings.add(i, strings.get(i));
+                i += 2;
+            } else {
+                i++;
+            }
+        }
+        return strings;
     }
 }
+
+/*********************************************************************************** и тай сойдЕт
+ public static ArrayList<String> fix(ArrayList<String> strings) {
+    String s;
+    int deletedArrays = 0;
+    for (int i = 0; i < arraylenght - deletedArrays; i++) {
+        s = strings.get(i);
+        if (s.contains("р") && s.contains("л")){
+            continue;
+            }
+         else if (s.contains("р") && !s.contains("л")) {
+            strings.remove(i);
+            i--;
+            deletedArrays ++;
+            }
+        else if (s.contains("л") && !s.contains("р")){
+            strings.add(0,s);
+            }
+        }
+    return strings;
+    }
+ }
+ *///////////////////////////////////////////////////////////////////////////////////////////////
