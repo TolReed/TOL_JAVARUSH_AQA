@@ -22,8 +22,8 @@ public class Solution {
                 break;
             }
 
-            Cat cat = new Cat(name);
-            CATS.add(cat);
+            //Cat cat = new Cat(name);
+            //CATS.add(cat);
         }
 
         printList();

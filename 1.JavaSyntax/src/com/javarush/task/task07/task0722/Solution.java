@@ -14,5 +14,17 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //напишите тут ваш код
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; ; i++) {
+            String s = reader.readLine();
+            if (s.equals("end")) {
+                break;
+            } else {
+                list.add(s);
+            }
+        }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
     }
 }
