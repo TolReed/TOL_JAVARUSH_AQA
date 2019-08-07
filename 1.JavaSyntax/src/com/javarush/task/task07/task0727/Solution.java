@@ -20,14 +20,38 @@ public class Solution {
             strings.add(string);
         }
 
+        /************************* OLD functionality - toUpperCase
+
         ArrayList<String> resultStrings = new ArrayList<String>();
+
         for (int i = 0; i < strings.size(); i++) {
             String string = strings.get(i);
             resultStrings.add(string.toUpperCase());
         }
 
-        for (int i = 0; i < resultStrings.size(); i++) {
+         for (int i = 0; i < resultStrings.size(); i++) {
             System.out.println(resultStrings.get(i));
+         }
+        *********************************************************/
+
+        ArrayList<String> resultStrings = new ArrayList<String>();
+
+        for (int i = 0; i < strings.size(); i++) {
+            String string = strings.get(i);
+            if (string.length() % 2 == 0) {
+                resultStrings.add(strings.get(i) + " ");
+                resultStrings.add(strings.get(i));
+            }
+            else if (string.length() % 2 != 0) {
+                resultStrings.add(strings.get(i) + " ");
+                resultStrings.add(strings.get(i) + " ");
+                resultStrings.add(strings.get(i));
+            }
+            resultStrings.add("\n");
+        }
+
+        for (int i = 0; i < resultStrings.size(); i++) {
+            System.out.print(resultStrings.get(i));
         }
     }
 }
