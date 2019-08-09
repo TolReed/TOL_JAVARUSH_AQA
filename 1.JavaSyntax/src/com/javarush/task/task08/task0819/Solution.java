@@ -8,7 +8,7 @@ Set из котов
 */
 
 public class Solution {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Set<Cat> cats = createCats();
 
         //напишите тут ваш код. step 3 - пункт 3
@@ -25,5 +25,5 @@ public class Solution {
         // step 4 - пункт 4
     }
 
-    // step 1 - пункт 1
+    // step 1 - пункт 1*/
 }

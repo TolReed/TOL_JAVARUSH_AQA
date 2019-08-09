@@ -8,7 +8,7 @@ import java.util.Set;
 */
 
 public class Solution {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
 
@@ -46,4 +46,6 @@ public class Solution {
     }
 
     //напишите тут ваш код
+
+    */
 }
