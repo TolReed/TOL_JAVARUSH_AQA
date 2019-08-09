@@ -9,13 +9,13 @@ public class Solution {
     public static int B = 2;
 
     public int C = A * B;
-    public static int D = B * A;
+    //public static int D = B * A;
 
     public static void main(String[] args) {
     }
 
     public static int getValue() {
-        return D;
+        return 3;// D;
     }
 
     public int getValue2() {

@@ -12,7 +12,7 @@ public class Solution {
         //напишите тут ваш код
     }
 
-    public static class Human {
+    public static class Human {/*
         //напишите тут ваш код
 
         public String toString() {
@@ -31,6 +31,6 @@ public class Solution {
                 }
             }
             return text;
-        }
+        }*/
     }
 }

@@ -21,6 +21,8 @@ public class Solution {
 
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
+        Map<String, String> map = new HashMap<String, String>();
+        return null;
 
     }
 
