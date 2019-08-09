@@ -7,7 +7,7 @@ import java.util.LinkedList;
 LinkedList и ArrayList
 */
 
-public class Solution {
+public class Solution {/*
     public static Object createArrayList() {
         //напишите тут ваш код
 
@@ -20,5 +20,5 @@ public class Solution {
 
     public static void main(String[] args) {
 
-    }
+    }*/
 }

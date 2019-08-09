@@ -9,7 +9,7 @@ import java.util.List;
 */
 
 public class Solution {
-    public static List getListForGet() {
+    /*public static List getListForGet() {
         //напишите тут ваш код
 
     }
@@ -31,5 +31,5 @@ public class Solution {
 
     public static void main(String[] args) {
 
-    }
+    }*/
 }

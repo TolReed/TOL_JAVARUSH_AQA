@@ -7,7 +7,7 @@ import java.util.Set;
 Больше 10? Вы нам не подходите
 */
 
-public class Solution {
+public class Solution {/*
     public static Set<Integer> createSet() {
         // напишите тут ваш код
 
@@ -20,5 +20,5 @@ public class Solution {
 
     public static void main(String[] args) {
 
-    }
+    }*/
 }

@@ -7,7 +7,7 @@ import java.util.Set;
 20 слов на букву «Л»
 */
 
-public class Solution {
+public class Solution {/*
     public static Set<String> createSet() {
         //напишите тут ваш код
 
@@ -15,5 +15,5 @@ public class Solution {
 
     public static void main(String[] args) {
 
-    }
+    }*/
 }
