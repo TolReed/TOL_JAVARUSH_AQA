@@ -18,14 +18,17 @@ public class Solution {
         }
     }
 
-
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
-        Map<String, String> map = new HashMap<String, String>();
-        return null;
+        Map<String, Cat> catMap = new HashMap<String, Cat>();
+        for (int i = 0; i < cats.length; i++) {
+            String j = cats[i];
+            catMap.put(j, new Cat(j));
+        }
+
+        return catMap;
 
     }
-
 
     public static class Cat {
         String name;
@@ -40,3 +43,31 @@ public class Solution {
         }
     }
 }
+/************************************************* WOOOOOOOOOOW, MultiMap
+
+Multimap<Integer, String> multimap = ArrayListMultimap.create();
+
+multimap.put(1, "A");
+multimap.put(1, "B");
+multimap.put(1, "C");
+multimap.put(1, "A");
+
+multimap.put(2, "A");
+multimap.put(2, "B");
+multimap.put(2, "C");
+
+multimap.put(3, "A");
+
+System.out.println(multimap.get(1));
+System.out.println(multimap.get(2));
+System.out.println(multimap.get(3));
+
+Выход:
+
+[A,B,C,A]
+[A,B,C]
+[A]
+
+
+
+ *********************************************************************************/

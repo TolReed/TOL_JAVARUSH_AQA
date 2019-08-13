@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("Sim", 5);
         map.put("Tom", 5.5);
         map.put("Arbus", false);
@@ -22,6 +22,10 @@ public class Solution {
         map.put("Comp", (double) 123);
 
         //напишите тут ваш код
+
+        for (Map.Entry<String, Object> pair: map.entrySet()) {
+            System.out.println(pair.getKey() + " - " + pair.getValue());
+        }
 
     }
 }

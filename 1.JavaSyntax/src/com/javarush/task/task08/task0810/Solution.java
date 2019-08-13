@@ -9,7 +9,7 @@ import java.util.List;
 Время для 10 тысяч вызовов get
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) {
         System.out.println(getGetTimeInMs(fill(new ArrayList())));
         System.out.println(getGetTimeInMs(fill(new LinkedList())));
@@ -24,10 +24,16 @@ public class Solution {/*
 
     public static long getGetTimeInMs(List list) {
         // напишите тут ваш код
+        Date start = new Date();
 
         get10000(list);
 
         // напишите тут ваш код
+        Date finish = new Date();
+
+        long time = finish.getTime() - start.getTime();
+
+        return time;
 
     }
 
@@ -40,5 +46,5 @@ public class Solution {/*
         for (int i = 0; i < 10000; i++) {
             list.get(x);
         }
-    }*/
+    }
 }
