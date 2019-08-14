@@ -17,9 +17,16 @@ public class Solution {
         System.out.println(getMinimum(integerList));
     }
 
-    public static int getMinimum(List<Integer> array) {
+    public static int getMinimum(List<Integer> array) throws IOException {
         // Найти минимум тут
-        return 0;
+        int minimum = array.get(0);
+        for (int i = 0; i < array.size(); i++) {
+
+            if (array.get(i) < minimum) {
+                minimum = array.get(i);
+            }
+        }
+        return minimum;
     }
 
     public static List<Integer> getIntegerList() throws IOException {
@@ -32,8 +39,6 @@ public class Solution {
             int number = Integer.parseInt(reader.readLine());
             numbers.add(number);
         }
-
-
 
         return numbers;
     }
