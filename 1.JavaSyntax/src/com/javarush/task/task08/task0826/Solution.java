@@ -2,6 +2,8 @@ package com.javarush.task.task08.task0826;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
 
 /* 
 Пять победителей
@@ -26,5 +28,15 @@ public class Solution {
 
     public static void sort(int[] array) {
         //напишите тут ваш код
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] < array[j+1]) {
+                    int a = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = a;
+                }
+            }
+        }
+
     }
 }
