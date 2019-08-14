@@ -8,7 +8,7 @@ import java.util.Set;
 */
 
 public class Solution {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
 
@@ -23,29 +23,50 @@ public class Solution {
         Set<Cat> result = new HashSet<Cat>();
 
         //напишите тут ваш код
+        result.add(new Cat());
+        result.add(new Cat());
+        result.add(new Cat());
+        result.add(new Cat());
 
         return result;
     }
 
     public static Set<Dog> createDogs() {
         //напишите тут ваш код
-        return null;
+        Set<Dog> result = new HashSet<Dog>();
+        result.add(new Dog());
+        result.add(new Dog());
+        result.add(new Dog());
+
+        return result;
     }
 
     public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         //напишите тут ваш код
-        return null;
+        Set<Object> pets = new HashSet<>();
+        pets.addAll(cats);
+        pets.addAll(dogs);
+
+        return pets;
     }
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
+        pets.removeAll(cats);
+
     }
 
     public static void printPets(Set<Object> pets) {
         //напишите тут ваш код
+        for (Object pet: pets) {
+            System.out.println(pet);
+        }
     }
 
     //напишите тут ваш код
 
-    */
+    public static class Cat {}
+    public static class Dog {}
+
+
 }

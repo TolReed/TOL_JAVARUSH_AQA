@@ -15,8 +15,20 @@ public class Solution {
 
     public static Map<String, String> createPeopleList() {
         //напишите тут ваш код
+        Map<String, String> map = new HashMap<>();
+        map.put("Абрамович", "Василь");
+        map.put("Шевченко", "Андрій");
+        map.put("Кличко", "Володимир");
+        map.put("Спілберг", "Петро");
+        map.put("Абрамович", "Володимир");
+        map.put("Порошенко", "Василь");
+        map.put("Зеленський", "Володимир");
+        map.put("Абрамович", "Артем");
+        map.put("Федорович", "Афанасій");
+        map.put("Франко", "Іванко");
 
-        return null;
+        return map;
+
     }
 
     public static void printPeopleList(Map<String, String> map) {

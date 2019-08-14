@@ -24,6 +24,17 @@ public class Solution {
 
     public static List<Integer> getIntegerList() throws IOException {
         // Создать и заполнить список тут
-        return null;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        int N = Integer.parseInt(reader.readLine());
+        for (int i = 0; i < N; i++) {
+            int number = Integer.parseInt(reader.readLine());
+            numbers.add(number);
+        }
+
+
+
+        return numbers;
     }
 }
