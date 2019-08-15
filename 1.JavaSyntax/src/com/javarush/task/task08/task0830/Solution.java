@@ -24,6 +24,15 @@ public class Solution {
 
     public static void sort(String[] array) {
         //напишите тут ваш код
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (isGreaterThan(array[j], array[j+1])) {
+                    String a = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = a;
+                }
+            }
+        }
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
