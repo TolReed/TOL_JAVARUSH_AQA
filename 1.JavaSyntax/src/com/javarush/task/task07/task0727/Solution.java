@@ -35,7 +35,7 @@ public class Solution {
         *********************************************************/
 
         ArrayList<String> resultStrings = new ArrayList<String>();
-
+        //Если в строке чётное число букв, строка удваивается, если нечётное - утраивается.
         for (int i = 0; i < strings.size(); i++) {
             String string = strings.get(i);
             if (string.length() % 2 == 0) {
