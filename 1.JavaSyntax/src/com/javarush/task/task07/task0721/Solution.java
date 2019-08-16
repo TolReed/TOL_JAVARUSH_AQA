@@ -18,6 +18,9 @@ public class Solution {
         for (int i = 0; i < 20; i++) {
             integers[i] = Integer.parseInt(reader.readLine());
         }
+        //Создать массив на 20 чисел.
+        //Заполнить его числами с клавиатуры.
+        //Найти максимальное и минимальное числа в массиве.
 
         int minimum = integers[0];
         int maximum = integers[0];
