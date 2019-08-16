@@ -10,7 +10,7 @@ public class Solution {
             System.out.println(i);
 
             //напишите тут ваш код
-            Thread.sleep(100); // I like more if Thread.sleep(1000);
+            Thread.sleep(100); //Написать программу, которая ведёт обратный отсчёт с 30 до 0, а в конце выводит на экран текст "Бум!". I like more if Thread.sleep(1000);
         }
 
         System.out.println("Бум!");
