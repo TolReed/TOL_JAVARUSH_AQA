@@ -34,7 +34,8 @@ public class Solution {
         System.out.println(child2);
         System.out.println(child3);
 
-
+        //Создай класс Human с полями имя(String), пол(boolean), возраст(int), отец(Human), мать(Human).
+        //Создай объекты и заполни их так, чтобы получилось: Два дедушки, две бабушки, отец, мать, трое детей. Вывести объекты на экран.
     }
 
     public static class Human {
