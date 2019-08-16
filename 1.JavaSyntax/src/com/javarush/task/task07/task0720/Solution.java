@@ -14,6 +14,9 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //напишите тут ваш код
+        //Ввести с клавиатуры 2 числа N и M.
+        //Ввести N строк и заполнить ими список.
+        //Переставить M первых строк в конец списка.
         ArrayList<String> list = new ArrayList<>();
         int N = Integer.parseInt(reader.readLine());
         int M = Integer.parseInt(reader.readLine());
