@@ -34,6 +34,7 @@ public class Solution {
     }
 
     public static void printList() {
+        //Программа вводит с клавиатуры данные про котов и выводит их на экран. Cat's name: Barsik, age: 6, weight: 5, tail: 22
         for (int i = 0; i < CATS.size(); i++) {
             System.out.println(CATS.get(i));
         }
