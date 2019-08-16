@@ -13,7 +13,7 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        //напишите тут ваш код
+        //напишите тут ваш код - Вводить с клавиатуры строки, пока пользователь не введет строку "end". Саму строку "end" не учитывать.
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; ; i++) {
             String s = reader.readLine();
