@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /* 
-Продолжаем мыть раму
+Продолжаем мыть раму - добавляєм ИМЕННО
 */
 
 public class Solution {
