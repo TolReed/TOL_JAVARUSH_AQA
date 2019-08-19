@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /* 
-Проверка на упорядоченность
+Проверка на упорядоченность, Введи с клавиатуры 10 слов в список строк. Определить, является ли список упорядоченным по возрастанию длины строки.
 */
 public class Solution {
     public static void main(String[] args) throws IOException {
