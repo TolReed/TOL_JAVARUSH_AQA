@@ -3,7 +3,7 @@ package com.javarush.task.task07.task0716;
 import java.util.ArrayList;
 
 /* 
-Р или Л
+Р или Л - change
 */
 
 public class Solution {
