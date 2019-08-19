@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /* 
-Удалить и вставить
+Удалить и вставить 13times > and print
 */
 
 public class Solution {
