@@ -9,7 +9,7 @@ import java.util.Set;
 Десять котов
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         Map<String, Cat> map = createMap();
         Set<Cat> set = convertMapToSet(map);
@@ -40,7 +40,7 @@ public class Solution {
         public String toString() {
             return "Cat " + this.name;
         }
-    }
+    }*/
 
 
 }

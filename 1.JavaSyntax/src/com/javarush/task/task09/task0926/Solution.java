@@ -6,7 +6,7 @@ import java.util.ArrayList;
 Список из массивов чисел
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         ArrayList<int[]> list = createList();
         printList(list);
@@ -14,6 +14,7 @@ public class Solution {
 
     public static ArrayList<int[]> createList() {
         //напишите тут ваш код
+        return createList();
     }
 
     public static void printList(ArrayList<int[]> list) {
@@ -22,5 +23,5 @@ public class Solution {
                 System.out.println(x);
             }
         }
-    }
+    }*/
 }

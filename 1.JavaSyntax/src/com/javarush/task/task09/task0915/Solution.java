@@ -8,7 +8,7 @@ import java.nio.file.FileSystemException;
 Перехват выборочных исключений
 */
 
-public class Solution {
+public class Solution {/*
     public static StatelessBean BEAN = new StatelessBean();
 
     public static void main(String[] args) {
@@ -34,5 +34,5 @@ public class Solution {
                 throw new IOException();
             }
         }
-    }
+    }*/
 }

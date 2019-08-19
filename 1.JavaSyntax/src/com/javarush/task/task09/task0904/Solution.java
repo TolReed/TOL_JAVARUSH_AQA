@@ -4,7 +4,7 @@ package com.javarush.task.task09.task0904;
 Стек-трейс длиной 10 вызовов
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         int stackTraceLength = method1().length - method10().length + 1;
     }
@@ -47,5 +47,5 @@ public class Solution {
 
     public static StackTraceElement[] method10() {
         return Thread.currentThread().getStackTrace();
-    }
+    }*/
 }

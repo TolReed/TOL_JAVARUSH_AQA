@@ -4,7 +4,7 @@ package com.javarush.task.task09.task0902;
 И снова StackTrace
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         method1();
     }
@@ -31,5 +31,5 @@ public class Solution {
 
     public static String method5() {
         //напишите тут ваш код
-    }
+    }*/
 }

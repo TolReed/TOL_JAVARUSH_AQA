@@ -6,7 +6,7 @@ import java.io.*;
 Код не компилится…
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -36,5 +36,5 @@ public class Solution {
 
     public static OutputStream getOutputStream(String fileName) throws IOException {
         return new FileOutputStream(fileName);
-    }
+    }*/
 }
