@@ -12,8 +12,9 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         //напишите тут ваш код
+        //Ввести с клавиатуры 10 чисел и заполнить ими список.
+        //Вывести их в обратном порядке. Каждый элемент - с новой строки.
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {
             numbers.add(i, Integer.parseInt(reader.readLine()));
