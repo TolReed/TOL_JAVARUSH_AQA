@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /* 
-Играем в Jолушку
+Играем в Jолушку %3 щк %2
 */
 
 public class Solution {
