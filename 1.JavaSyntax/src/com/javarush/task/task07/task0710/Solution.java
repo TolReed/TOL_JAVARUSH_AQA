@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 /* 
 В начало списка
+Go to top
 */
 
 public class Solution {
