@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /* 
-Самые-самые
+Самые-самые short or long - try
 */
 
 public class Solution {
