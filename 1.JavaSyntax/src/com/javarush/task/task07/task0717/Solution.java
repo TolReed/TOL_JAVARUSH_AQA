@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 /* 
 Удваиваем слова
+Введи с клавиатуры 10 слов в список строк. Метод doubleValues должен удваивать слова
 */
 
 public class Solution {
