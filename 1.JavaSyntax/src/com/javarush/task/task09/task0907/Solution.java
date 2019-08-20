@@ -5,10 +5,13 @@ package com.javarush.task.task09.task0907;
 */
 
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ArithmeticException {
         //напишите тут ваш код
-
-        int a = 42 / 0;
+        try {
+            int a = 42 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println(e);
+        }
 
         //напишите тут ваш код
     }
