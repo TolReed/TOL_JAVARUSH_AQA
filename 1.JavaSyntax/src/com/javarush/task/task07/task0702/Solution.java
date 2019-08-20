@@ -25,7 +25,7 @@ public class Solution {
             a[i] = s.nextLine();
         }
         //System.out.println("Элементы в обратном порядке");
-        for (int i = a.length - 1; i >= 0; i--) {
+        for (int i = a.length - 1; i >= 0; i--) { //проходимо масив з останнього елемента до першого
             System.out.println(a[i]);
         }
 
