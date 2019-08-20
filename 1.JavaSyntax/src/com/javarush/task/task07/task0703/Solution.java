@@ -17,7 +17,7 @@ public class Solution {
         int[] array = new int[10];
 
         for (int i = 0; i < list.length; i++) {
-            list[i] = s.nextLine(); // зчитуємо з екрану строки
+            list[i] = s.nextLine(); // зчитуємо з екрану строки/рядочки
             array[i] = list[i].length(); // для кожної строчки в масиві присвоюємо відповідне значення довжини в масив чисел
 
         }
