@@ -23,7 +23,7 @@ public class Solution {
         }
 
 
-        int maxString = 0;
+        int maxString = 0; //находимо найдовший рядок з введених з клавіатури
         for (int i = 0; i < strings.size(); i++) {
             if (strings.get(i).length() > maxString) {
                 maxString = strings.get(i).length();
