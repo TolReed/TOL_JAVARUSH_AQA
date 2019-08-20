@@ -22,8 +22,7 @@ public class Solution {
         int [] numbers = new int[20];
 
         for (int i = 0; i < numbers.length; i ++) {
-            numbers[i] = Integer.parseInt(reader.readLine());
-
+            numbers[i] = Integer.parseInt(reader.readLine()); //зчитуємо дані з клавіатури і заносимо їх у масив
         }
         return numbers;
     }
@@ -31,7 +30,7 @@ public class Solution {
     public static int max(int[] array) throws IOException {
         // найди максимальное значение
         Arrays.sort(array);
-        return array[array.length - 1];
+        return array[array.length - 1]; // повертаємо максимальний елемент масиву, після того як відсортували
     }
 }
 
