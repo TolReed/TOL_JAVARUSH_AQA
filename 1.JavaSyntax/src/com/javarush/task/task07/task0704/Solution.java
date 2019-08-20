@@ -20,7 +20,7 @@ public class Solution {
             numbers[i] = sc.nextInt();
         }
 
-        for (int i = numbers.length - 1; i >= 0; i--) {
+        for (int i = numbers.length - 1; i >= 0; i--) { //проходимся п масиву і виводимо числа з зворотньому порядку
             System.out.println(numbers[i]);
         }
 
