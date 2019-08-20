@@ -21,10 +21,10 @@ public class Solution {
 
             if (i % 2 == 0 || i == 0) {
               even = even + numbers[i];
-                //System.out.println(even);
+                //System.out.println(even); - для перевірки
             } else {
               odd = odd + numbers[i];
-                //System.out.println(odd);
+                //System.out.println(odd); - для перевірки
             }
         }
 
