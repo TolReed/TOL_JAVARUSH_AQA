@@ -18,7 +18,7 @@ public class Solution {
         list.add("майже фініш, але залишився ще один доуповнітєльний");
         list.add("фуууууууууух! дай пятішку, пятушанчик, пятачок");
 
-        int listSize = list.size();
+        int listSize = list.size(); //визначаємо розмір масиву
         System.out.println(listSize);
 
         for (int i = 0; i < list.size(); i++) {
