@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        //напишите тут ваш код - Map из 10 пар - Создать коллекцию Map<String, String> (реализация HashMap), занести туда 10 пар строк
         //все элементы хранятся в парах
         Map<String, String> map = new HashMap<String, String>();
         map.put("арбуз", "ягода");
