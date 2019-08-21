@@ -25,7 +25,9 @@ public class Solution {
     }
 
     public static void printKeys(Map<String, String> map) {
-        //напишите тут ваш код
+        //напишите тут ваш код - Вывести на экран список ключей
+        //Есть коллекция Map<String, String> (реализация HashMap), туда занесли 10 различных строк.
+        //Вывести на экран список ключей, каждый элемент с новой строки.
         for (Map.Entry<String, String> pair : map.entrySet()) {
             System.out.println(pair.getKey());
         }
