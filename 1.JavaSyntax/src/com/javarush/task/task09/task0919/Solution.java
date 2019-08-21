@@ -4,9 +4,20 @@ package com.javarush.task.task09.task0919;
 Деление на ноль
 */
 
-public class Solution {/*
+public class Solution {
 
     public static void main(String[] args) {
-        divideByZero();
-    }*/
+        try {
+            divideByZero();
+        } catch (Exception e) {
+            System.out.println(e);
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void divideByZero() {
+        int a = 10 / 0;
+        System.out.println(a);
+    }
 }
