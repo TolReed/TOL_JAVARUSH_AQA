@@ -10,6 +10,11 @@ public class Solution {
             System.out.println(i);
 
             //напишите тут ваш код
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+
+            }
         }
     }
 }
