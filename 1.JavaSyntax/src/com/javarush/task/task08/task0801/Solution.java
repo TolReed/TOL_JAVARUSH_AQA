@@ -11,7 +11,7 @@ import java.util.Set;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        Set<String> set = new HashSet<String>();
+        Set<String> set = new HashSet<String>(); //Set из растений - Создать коллекцию Set (реализация HashSet) с типом элементов String.
         set.add("арбуз");
         set.add("банан");
         set.add("вишня");
