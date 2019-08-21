@@ -3,20 +3,36 @@ package com.javarush.task.task09.task0915;
 import java.io.CharConversionException;
 import java.io.IOException;
 import java.nio.file.FileSystemException;
-
-/* 
+/*
 Перехват выборочных исключений
 */
-
-public class Solution {/*
+public class Solution {
     public static StatelessBean BEAN = new StatelessBean();
 
-    public static void main(String[] args) {
-        handleExceptions();
+    public static void main(String[] args) throws IOException {
+        //если возникло исключение FileSystemException,
+        // то логировать его (вызвать метод BEAN.log) и пробросить дальше
+        try {
+            handleExceptions();
+        } catch (Exception e) {
+            BEAN.log(e);
+        }
     }
 
-    public static void handleExceptions() {
-        BEAN.methodThrowExceptions();
+    public static void handleExceptions() throws IOException, FileSystemException {
+        //if FileSystemException occurs!
+        try {
+            BEAN.methodThrowExceptions();
+        } catch (FileSystemException e) {
+            BEAN.log(e);
+            throw e;
+        } catch (IOException e) {
+            BEAN.log(e);
+        } catch (Exception e) {
+            BEAN.log(e);
+            throw e;
+        }
+
     }
 
     public static class StatelessBean {
@@ -34,5 +50,5 @@ public class Solution {/*
                 throw new IOException();
             }
         }
-    }*/
+    }
 }
