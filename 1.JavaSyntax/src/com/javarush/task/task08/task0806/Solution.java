@@ -21,7 +21,9 @@ public class Solution {
         map.put("Hugs", 111111111111L);
         map.put("Comp", (double) 123);
 
-        //напишите тут ваш код
+        //напишите тут ваш код - Коллекция Map из Object
+        //Есть коллекция Map<String, Object> (реализация HashMap), туда занесли 10 различных пар объектов.
+        //Вывести содержимое коллекции на экран, каждый элемент с новой строки.
 
         for (Map.Entry<String, Object> pair: map.entrySet()) {
             System.out.println(pair.getKey() + " - " + pair.getValue());
