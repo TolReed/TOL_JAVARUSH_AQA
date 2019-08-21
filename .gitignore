@@ -27,3 +27,5 @@ out.log
 out.log.1
 *.log
 *.xml___jb_tmp___
+*.log
+*.properties
