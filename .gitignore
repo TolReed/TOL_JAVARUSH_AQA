@@ -14,14 +14,6 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 .idea/workspace.xml
 
-out.log
-out.log
-JavaRushPlugin.properties
-JavaRushPlugin.properties
-out.log
-JavaRushPlugin.properties
-JavaRushPlugin.properties
-*.properties
 .idea/modules.xml
 out.log
 out.log.1
@@ -29,3 +21,5 @@ out.log.1
 *.xml___jb_tmp___
 *.log
 *.properties
+*.log
+*.log
