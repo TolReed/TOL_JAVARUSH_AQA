@@ -7,16 +7,21 @@ import java.rmi.RemoteException;
 Перехват checked-исключений
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) {
         handleExceptions(new Solution());
 
     }
 
     public static void handleExceptions(Solution obj) {
-        obj.method1();
-        obj.method2();
-        obj.method3();
+        try {
+            obj.method1();
+            obj.method2();
+            obj.method3();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
     }
 
     public void method1() throws IOException {
@@ -29,5 +34,5 @@ public class Solution {/*
 
     public void method3() throws RemoteException {
         throw new RemoteException();
-    }*/
+    }
 }
