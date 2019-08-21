@@ -9,8 +9,8 @@ import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        String[] cats = new String[]{"васька", "мурка", "дымка", "рыжик", "серый", "снежок", "босс", "борис", "визя", "гарфи"};
-
+        String[] cats = new String[]{"васька", "мурка", "дымка", "рыжик", "серый", "снежок", "босс", "борис", "визя", "гарфи"}; //Коллекция Map из котов
+        
         Map<String, Cat> map = addCatsToMap(cats);
 
         for (Map.Entry<String, Cat> pair : map.entrySet()) {
