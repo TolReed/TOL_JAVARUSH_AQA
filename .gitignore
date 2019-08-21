@@ -14,15 +14,13 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 .idea/workspace.xml
 
-.idea/modules.xml
+JavaRushPlugin.properties
 out.log
 out.log.1
 *.log
+
 *.xml___jb_tmp___
-*.log
-*.properties
-*.log
-*.log
-JavaRushPlugin.properties
-*.jrtc
+
+*.log.
+
 *.properties
