@@ -13,8 +13,8 @@ public class Solution {
         String sourceFileName = reader.readLine();
         String destinationFileName = reader.readLine();
 
-        InputStream fileInputStream = getInputStream(destinationFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
-        OutputStream fileOutputStream = getOutputStream(sourceFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
+        InputStream fileInputStream = getInputStream(sourceFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
+        OutputStream fileOutputStream = getOutputStream(destinationFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
 
         int count = 0;
         while (fileInputStream.available() > 0) //; < ha-ha-ha
