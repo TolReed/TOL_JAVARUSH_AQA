@@ -6,18 +6,18 @@ import java.io.*;
 Код не компилится…
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         String sourceFileName = reader.readLine();
         String destinationFileName = reader.readLine();
 
-        InputStream fileInputStream = getOutputStream(destinationFileName);
-        InputStream fileOutputStream = getOutputStream(destinationFileName);
+        InputStream fileInputStream = getInputStream(destinationFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
+        OutputStream fileOutputStream = getOutputStream(sourceFileName); //при запуску програми треба вказати два файла локальні, шлях до них без лапок
 
         int count = 0;
-        while (fileInputStream.available() > 0) ;
+        while (fileInputStream.available() > 0) //; < ha-ha-ha
         {
             int data = fileInputStream.read();
             fileOutputStream.write(data);
@@ -36,5 +36,5 @@ public class Solution {/*
 
     public static OutputStream getOutputStream(String fileName) throws IOException {
         return new FileOutputStream(fileName);
-    }*/
+    }
 }
