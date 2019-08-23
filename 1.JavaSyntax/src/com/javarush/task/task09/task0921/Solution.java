@@ -39,5 +39,5 @@ future improvements:
 1.  Так как list никак не чистится, то если в main запустить readData() несколько раз - каждый раз list будет увеличиваться,
     и выводить результаты еще и предыдущих вызовов метода readData().
     Лучше сделать его локальной переменной метода.
-2.  Change 101 in order to input was much as I want numbers and add them to the array
+2.  Change 101 in order to input was much as I want numbers and add them to the array > done, changed to WHILE
 */
