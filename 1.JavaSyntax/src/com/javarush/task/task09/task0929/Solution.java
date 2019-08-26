@@ -11,14 +11,15 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         InputStream fileInputStream;
+        String sourceFileName = reader.readLine();
 
         try {
-            String sourceFileName = reader.readLine();
+
             fileInputStream = getInputStream(sourceFileName);
 
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует.");
-            String sourceFileName = reader.readLine();
+            sourceFileName = reader.readLine();
             fileInputStream = getInputStream(sourceFileName); //hmmmmmmmmm
         }
 
