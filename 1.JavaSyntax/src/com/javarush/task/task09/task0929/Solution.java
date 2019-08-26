@@ -19,7 +19,7 @@ public class Solution {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует.");
             String sourceFileName = reader.readLine();
-            fileInputStream = getInputStream(sourceFileName);
+            fileInputStream = getInputStream(sourceFileName); //hmmmmmmmmm
         }
 
         String destinationFileName = reader.readLine();
