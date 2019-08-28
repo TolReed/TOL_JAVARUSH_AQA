@@ -10,7 +10,7 @@ import java.util.Map;
 Поправочки нужны
 */
 
-public class Solution {
+public class Solution {/*
     HashMap<int, String> map;
     static Integer index;
     static String name;
@@ -35,5 +35,5 @@ public class Solution {
             name = pair.getValue();
             System.out.println("Id=" + index + " Name=" + name);
         }
-    }
+    }*/
 }

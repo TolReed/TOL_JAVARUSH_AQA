@@ -8,7 +8,7 @@ import java.util.ArrayList;
 Количество букв
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -27,5 +27,5 @@ public class Solution {
         }
 
         // напишите тут ваш код
-    }
+    }*/
 }
