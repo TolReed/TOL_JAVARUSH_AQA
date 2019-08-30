@@ -10,5 +10,12 @@ public class Solution {
 
     public static class Human {
         // Напишите тут ваши переменные и конструкторы
+        String firstName;
+        String secondName;
+        int age;
+        Boolean sex;
+        String address;
+        int phoneNumber;
+
     }
 }
