@@ -2,13 +2,13 @@ package com.javarush.task.task10.task1012;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.*;
 
 /* 
 Количество букв
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -27,5 +27,32 @@ public class Solution {/*
         }
 
         // напишите тут ваш код
-    }*/
+        HashMap<Character,Integer> charsFrequency = new HashMap<>();
+
+        for (Character leter:
+                alphabet) {
+            int frequency = 0;
+            for (String string:
+                    list) {
+                char[] chars = string.toCharArray();
+                for (Character symbol:
+                        chars) {
+                    if(symbol.equals(leter))
+                    {
+                        frequency++;
+                    }
+                }
+            }
+            charsFrequency.put(leter,frequency);
+        }
+
+
+        for(Character alphabetLetter: alphabet) {
+            for (Map.Entry<Character, Integer> pair :
+                    charsFrequency.entrySet()) {
+                if(pair.getKey().equals(alphabetLetter))
+                    System.out.println(pair.getKey() + " " + pair.getValue());
+            }
+        }
+    }
 }
