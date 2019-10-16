@@ -49,3 +49,9 @@ public class Solution {
         return result;
     }
 }
+
+/*
+
+as example, frequency method -
+https://www.geeksforgeeks.org/java-util-collections-frequency-java-examples/
+*/
