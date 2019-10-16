@@ -14,8 +14,16 @@ public class Solution {
 
     public static ArrayList<String>[] createList() {
         //напишите тут ваш код
+        ArrayList<String> places = new ArrayList<String>();
+        places.add("Buenos Aires");
+        places.add("Córdoba");
+        places.add("La Plata");
 
-        return null;
+        ArrayList<String>[] result = new ArrayList[2];
+        result[0] = places;
+        result[1] = places;
+
+        return result;
     }
 
     public static void printList(ArrayList<String>[] arrayOfStringList) {
