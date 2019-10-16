@@ -8,7 +8,7 @@ import java.util.ArrayList;
 Безопасное извлечение из списка
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -25,6 +25,11 @@ public class Solution {/*
 
     public static int safeGetElement(ArrayList<Integer> list, int index, int defaultValue) {
         //напишите тут ваш код
-    }*/
+        try {
+            return list.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            return defaultValue;
+            }
+        }
 
 }
