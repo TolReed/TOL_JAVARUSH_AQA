@@ -14,14 +14,15 @@ public class Solution {
         HashMap<Integer, String> map = new HashMap<Integer, String>();
 
         while (true) {
-            int id = Integer.parseInt(reader.readLine());
+            String Stringid = reader.readLine();
+            int id = Integer.parseInt(Stringid);
             String name = reader.readLine();
-            map.put(id, name);
 
-            if (name.isEmpty()) {
-                //map.put(id, "");
+            if (name.isEmpty() || Stringid.isEmpty()) {
+                map.put(id, "");
                 break;
-
+                } else {
+                map.put(id, name);
             }
         }
 
