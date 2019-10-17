@@ -11,25 +11,49 @@ import java.util.Map;
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
 
         while (true) {
-            String Stringid = reader.readLine();
-            int id = Integer.parseInt(Stringid);
-            String name = reader.readLine();
+            try {
 
-            if (name.isEmpty() || Stringid.isEmpty()) {
-                map.put(id, "");
-                break;
-                } else {
-                map.put(id, name);
+                String s = reader.readLine();
+                if (s == null || s.isEmpty()) { // check if our entered line is not empty
+                    break;
+                }
+
+                int id = Integer.parseInt(s);
+                String name = reader.readLine();
+
+                if (name.isEmpty()) { // check if our entered line for name is not empty
+                    map.put("", id);
+                    break;
+                }
+
+                map.put(name, id);
+
+            }
+            catch (Exception e) {
             }
         }
 
-        for (Map.Entry<Integer, String> pair: map.entrySet()) {
-            System.out.println(pair.getKey() + " " + pair.getValue());
+        for (Map.Entry<String, Integer> pair: map.entrySet()) {
+            System.out.println(pair.getValue() + " " + pair.getKey());
         }
 
         //System.out.println("Id=" + id + " Name=" + name); <- old
     }
 }
+
+/* Old code - works but validator doesn't allow it! WHY ????????????????????????????????????
+
+
+
+String s = reader.readLine();
+            if (s.equals("")) {break;}
+            String name = reader.readLine();
+            int id = Integer.parseInt(s);
+            if (name.equals("")) {break;}
+            map.put(name, id);
+
+
+*/
