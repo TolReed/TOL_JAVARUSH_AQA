@@ -12,7 +12,7 @@ public class Solution {
 
     }
 
-    public class SamsungGalaxyS2 {
+    public class SamsungGalaxyS2 extends AppleIPhone {
 
     }
 }
