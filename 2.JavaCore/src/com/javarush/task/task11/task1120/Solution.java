@@ -7,7 +7,7 @@ package com.javarush.task.task11.task1120;
 public class Solution {
     public static void main(String[] args) {
     }
-
+    /*inheritance*/
     public class House extends Asset {
 
     }

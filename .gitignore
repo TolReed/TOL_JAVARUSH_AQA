@@ -31,3 +31,4 @@ out.log
 *.1
 *.log
 *.log
+*.properties
