@@ -3,24 +3,23 @@ package com.javarush.task.task11.task1117;
 /* 
 Альтернативная цепочка наследования
 */
-
 public class Solution {
     public static void main(String[] args) {
     }
 
-    public class Carnivore {
+    public class Carnivore extends Animal {
 
     }
 
-    public class Cow {
+    public class Cow extends Animal {
 
     }
 
-    public class Dog {
+    public class Dog extends Carnivore {
 
     }
 
-    public class Pig {
+    public class Pig extends Animal {
 
     }
 
