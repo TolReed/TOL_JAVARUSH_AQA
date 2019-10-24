@@ -17,6 +17,7 @@ public class Solution {
 
         // напишите тут ваш код
 
+
         return new Pair<Integer, Integer>(0, 0);
     }
 
