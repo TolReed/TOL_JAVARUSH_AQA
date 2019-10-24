@@ -4,7 +4,7 @@ package com.javarush.task.task12.task1231;
 Ненужные абстракции
 */
 
-public class Solution {
+public class Solution {/*
 
     public static void main(String[] args) {
         Horse horse = new Pegasus();
@@ -29,6 +29,6 @@ public class Solution {
 
     public static class SwimmingPegasus extends Pegasus {
         public void swim();
-    }
+    }*/
 
 }
