@@ -1,6 +1,6 @@
 package com.javarush.task.task12.task1202;
 
-/* 
+/*
 Кит, коровий потомок
 */
 
@@ -18,6 +18,10 @@ public class Solution {
     }
 
     public static class Whale extends Cow {
+        public String getName() {
+             return "";
+        }
+
 
     }
 }
