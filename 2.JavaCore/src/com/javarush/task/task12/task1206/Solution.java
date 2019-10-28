@@ -10,4 +10,9 @@ public class Solution {
     }
 
     //Напишите тут ваши методы
+    public static void print(int a) {
+    }
+
+    public static void print(String a) {
+    }
 }
