@@ -10,4 +10,23 @@ public class Solution {
     }
 
     //Напишите тут ваши методы
+    public static int print(int a) {
+        return a;
+    }
+
+    public static double print(double a) {
+        return a;
+    }
+
+    public static String print(String a) {
+        return String.valueOf(a);
+    }
+
+    public static long print (long a) {
+        return a;
+    }
+
+    public static Boolean print (boolean a) {
+        return a;
+    }
 }
