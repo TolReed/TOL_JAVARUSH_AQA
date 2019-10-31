@@ -10,5 +10,16 @@ public class Solution {
     }
 
 //add interfaces here - добавь интерфейсы тут
+    public interface CanFly {
+        public Boolean fly();
+    }
+
+    public interface CanRun {
+        public Boolean run();
+    }
+
+    public interface CanSwim {
+        public Boolean swim();
+    }
 
 }
