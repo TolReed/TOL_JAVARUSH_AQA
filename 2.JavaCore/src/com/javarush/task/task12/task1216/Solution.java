@@ -10,5 +10,10 @@ public class Solution {
     }
 
     //add an interface here - добавь интерфейс тут
+    public interface CanFly {
+        public String getName();
+        public int getAge();
+
+    }
 
 }
