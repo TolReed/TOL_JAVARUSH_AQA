@@ -20,8 +20,23 @@ public class Solution {
         }
 
         //напишите тут ваш код
+        int min = 24176327;
+        int index = 0;
 
-        return new Pair<Integer, Integer>(0, 0);
+        for (int i = 0; i < array.length; i ++) {
+            if (array[i] < min ) {
+                min = array[i];
+            }
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == min) {
+                break;
+            }
+            index ++;
+        }
+
+        return new Pair<Integer, Integer>(min, index);
     }
 
 
@@ -35,3 +50,11 @@ public class Solution {
         }
     }
 }
+
+
+/*
+alternative solution:
+int min = 24176327 ; int ind =  0 ;
+  for ( int i = 0; i < array.length; i ++ )
+    if ( array[i] < min ) { min = array[i] ; ind = i ; }
+*/
