@@ -17,7 +17,7 @@ public class Solution {
     }
 
     interface Dream {
-        public Hobby HOBBY = new Hobby();
+        public Hobby HOBBY = new Hobby(); //static was before
     }
 
     static class Hobby implements Dream, Desire {
