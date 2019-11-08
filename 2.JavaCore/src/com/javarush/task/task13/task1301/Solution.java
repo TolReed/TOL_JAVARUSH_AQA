@@ -21,7 +21,21 @@ public class Solution {
         void sleepOnTheFloor();
     }
 
-    public static class BeerLover {
+    public static class BeerLover implements  Drinker{
 
+        @Override
+        public void askForMore(String message) {
+
+        }
+
+        @Override
+        public void sayThankYou() {
+
+        }
+
+        @Override
+        public boolean isReadyToGoHome() {
+            return false;
+        }
     }
 }
