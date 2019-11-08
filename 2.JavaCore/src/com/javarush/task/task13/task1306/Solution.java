@@ -16,18 +16,19 @@ public class Solution {
     }
 
     interface DBObject {
-
+        DBObject initializeIdAndName(long id, String name);
     }
 
     static class User implements DBObject {
-        DBObject initializeIdAndName(long id, String name) {
+        long id;
+        String name;
+
+        public User initializeIdAndName(long id, String name) {
             this.id = id;
             this.name = name;
             return this;
         }
 
-        long id;
-        String name;
 
         @Override
         public String toString() {
