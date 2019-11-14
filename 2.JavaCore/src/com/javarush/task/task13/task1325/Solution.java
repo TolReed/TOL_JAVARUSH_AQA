@@ -6,7 +6,7 @@ import java.awt.*;
 Компиляция программы
 */
 
-public class Solution {
+public class Solution {/*
 
     public static void main(String[] args) throws Exception {
         Fox bigFox = new BigFox();
@@ -26,6 +26,6 @@ public class Solution {
 
     public abstract static class BigFox {
 
-    }
+    }*/
 
 }

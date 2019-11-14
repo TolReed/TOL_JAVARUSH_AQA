@@ -4,7 +4,7 @@ package com.javarush.task.task13.task1317;
 The weather is fine
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         System.out.println(new Today(WeatherType.CLOUDY));
         System.out.println(new Today(WeatherType.FOGGY));
@@ -22,5 +22,5 @@ public class Solution {
         public String toString() {
             return String.format("Today it will be %s", this.getWeatherType());
         }
-    }
+    }*/
 }

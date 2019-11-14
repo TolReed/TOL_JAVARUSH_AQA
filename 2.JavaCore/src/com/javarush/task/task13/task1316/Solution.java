@@ -16,7 +16,7 @@ public class Solution {
         void onPress();
     }
 
-    interface Button extends SimpleObject {
+    interface Button extends SimpleObject {/*
 
         final String NAME = "Submit";
 
@@ -32,7 +32,7 @@ public class Solution {
 
         String onPress(Object o);
 
-        private String onPress(Object o);
+        private String onPress(Object o);*/
 
     }
 }
