@@ -2,11 +2,11 @@ package com.javarush.task.task13.task1325;
 
 import java.awt.*;
 
-/* 
+/*
 Компиляция программы
 */
 
-public class Solution {/*
+public class Solution {
 
     public static void main(String[] args) throws Exception {
         Fox bigFox = new BigFox();
@@ -18,14 +18,18 @@ public class Solution {/*
         Color getColor();
     }
 
-    public static class Fox implements Animal {
+    public static abstract class Fox implements Animal {
         public String getName() {
             return "Fox";
         }
     }
 
-    public abstract static class BigFox {
+    public static class BigFox extends Fox {
 
-    }*/
+        @Override
+        public Color getColor() {
+            return null;
+        }
+    }
 
 }
