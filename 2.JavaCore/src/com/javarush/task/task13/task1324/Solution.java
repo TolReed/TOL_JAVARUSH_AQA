@@ -16,8 +16,10 @@ public class Solution {
         Integer getAge();
     }
 
-    public abstract class Fox implements Animal { // changed static to abstract - Поменяй код так, чтобы в классе Fox был только один метод - getName
-        public String getName() {
+    public abstract class Fox implements Animal {
+        // changed static to abstract -
+        // Поменяй код так, чтобы в классе Fox был только один метод - getName
+        public String getName() { //
             return "Fox";
         }
     }
