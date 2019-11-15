@@ -58,7 +58,7 @@ public class Solution {
 
         @Override
         public void move() {
-            
+
         }
 
         @Override
