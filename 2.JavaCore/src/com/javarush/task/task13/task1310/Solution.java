@@ -18,13 +18,13 @@ public class Solution {
         boolean wantsToGetExtraWork();
     }
 
-    interface Secretary {
+    interface Secretary extends Person, Workable {
     }
 
-    interface Boss {
+    interface Boss extends Person, Workable {
     }
 
-    class CleverMan {
+    class CleverMan implements Boss {
         public void use(Person person) {
             person.startToWork();
         }
@@ -37,11 +37,16 @@ public class Solution {
         }
     }
 
-    class SmartGirl {
+    class SmartGirl implements Secretary {
         public void use(Person person) {
         }
 
         public void startToWork() {
+        }
+
+        @Override
+        public boolean wantsToGetExtraWork() {
+            return false;
         }
     }
 }
