@@ -4,7 +4,7 @@ package com.javarush.task.task14.task1416;
 Исправление ошибок
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         Swimmable animal = new Orca();
         animal.swim();
@@ -48,5 +48,5 @@ public class Solution {
 
     static class Otter {
 
-    }
+    }*/
 }

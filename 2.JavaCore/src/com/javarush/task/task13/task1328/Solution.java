@@ -9,7 +9,7 @@ public class Solution {
         Robot amigo = new Robot("Амиго");
         Robot enemy = new Robot("Сгибальщик-02");
 
-        doMove(amigo, enemy);/
+        doMove(amigo, enemy);
         doMove(amigo, enemy);
         doMove(enemy, amigo);
         doMove(amigo, enemy);
@@ -17,6 +17,20 @@ public class Solution {
         doMove(amigo, enemy);
         doMove(enemy, amigo);
         doMove(amigo, enemy);
+
+        /*System.out.println("!_ FOR TESTING PURPOSES _!");
+        Robot robot = new Robot("amigo");
+
+        for (int i = 0; i < 100; i++) {
+            BodyPart bodyPart = robot.attack();
+            robot.defense();
+            if (bodyPart.equals(BodyPart.CHEST)) {
+                System.out.println("success");
+                return;
+            }
+        }
+        System.out.println("fail");
+        System.out.println("!_ FOR TESTING PURPOSES _!");*/
     }
 
     public static void doMove(AbstractRobot robotFirst, AbstractRobot robotSecond) {

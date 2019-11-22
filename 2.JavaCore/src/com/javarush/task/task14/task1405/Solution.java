@@ -4,7 +4,7 @@ package com.javarush.task.task14.task1405;
 Food
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         Food food = new Food();
         Selectable selectable = new Food();
@@ -30,5 +30,5 @@ public class Solution {
         public void onEat() {
             System.out.println("The food was eaten");
         }
-    }
+    }*/
 }
