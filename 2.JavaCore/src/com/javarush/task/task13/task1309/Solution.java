@@ -13,6 +13,6 @@ public class Solution {
     }
 
     interface CanFly extends CanMove {
-        public Double speed(CanFly a);
+        public Double speed(CanFly a); //5. В интерфейсе CanFly должен быть объявлен метод speed c одним аргументом типа CanFly и с типом возвращаемого значения Double
     }
 }
