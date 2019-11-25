@@ -4,9 +4,28 @@ package com.javarush.task.task14.task1404;
 Коты
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Cat> list = new ArrayList<>(); //ініціалізуємо список для внесення введених котів
+        while (true) {
+            String input = reader.readLine();
+            if (input.equals("")) { // якщо пустий ввід
+                break;
+            } else {
+                list.add(CatFactory.getCatByKey(input)); //додаємо всі котів у наш список
+            }
+        }
+        reader.close(); //закриваємо процес зчитування
+
+        for (Cat cat: list) {
+            System.out.println(cat.toString());
+        }
     }
 
     static class CatFactory {
