@@ -27,17 +27,16 @@ public class Solution {
 
     interface Selectable {
         void onSelect();
-        }
     }
 
-    class Food implements Solution.Selectable {
+    static class Food implements Selectable {
         public void onEat() {
             System.out.println("The food was eaten");
         }
 
+        @Override
         public void onSelect() {
             System.out.println("The food was selected");
         }
-
-
+    }
 }
