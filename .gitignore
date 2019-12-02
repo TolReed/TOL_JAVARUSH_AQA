@@ -37,3 +37,4 @@ out.log
 *.properties
 *.log
 out.log
+*.log
