@@ -7,7 +7,7 @@ import java.util.List;
 ООП - книги
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         List<Book> books = new LinkedList<Book>();
         books.add(new MarkTwainBook("Tom Sawyer"));
@@ -39,5 +39,5 @@ public class Solution {
         public String toString() {
             return getOutputByBookType();
         }
-    }
+    }*/
 }

@@ -4,7 +4,7 @@ package com.javarush.task.task15.task1509;
 Мужчина или женщина?
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         Man man = new Man();
         Woman woman = new Woman();
@@ -27,5 +27,5 @@ public class Solution {
 
     public static class Woman {
 
-    }
+    }*/
 }

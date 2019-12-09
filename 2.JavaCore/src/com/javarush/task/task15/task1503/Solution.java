@@ -4,7 +4,7 @@ package com.javarush.task.task15.task1503;
 ООП - машинки
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         new Solution.LuxuriousCar().printlnDesire();
         new Solution.CheapCar().printlnDesire();
@@ -30,5 +30,5 @@ public class Solution {
         public static String CHEAP_CAR = "дешевой машине";
         public static String FERRARI_NAME = "Феррари";
         public static String LANOS_NAME = "Ланосе";
-    }
+    }*/
 }

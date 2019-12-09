@@ -4,7 +4,7 @@ package com.javarush.task.task15.task1510;
 Все лишнее - прочь!
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         add((short) 1, 2f);
         add(1, 2);
@@ -23,5 +23,5 @@ public class Solution {
 
     public static void add(double i, double j) {
         System.out.println("Double addition");
-    }
+    }*/
 }
