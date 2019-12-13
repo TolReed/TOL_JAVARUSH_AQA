@@ -13,7 +13,21 @@ public class Solution {
         print((int) 1);
     }
 
-    public static void print(Integer i) {
+     public static void print(Integer i) {
+        System.out.println("Это Integer");
+    }
+
+    public static void print(Object i) {
+        System.out.println("Это Object");
+    }
+
+    public static void print(double i) {
+        System.out.println("Это double");
+    }
+}
+
+
+/* public static void print(Integer i) {
         System.out.println("Это Integer");
     }
 
@@ -40,4 +54,5 @@ public class Solution {
     public static void print(float i) {
         System.out.println("Это Double");
     }
-}
+
+ */
