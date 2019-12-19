@@ -10,6 +10,12 @@ import java.util.Map;
 public class Solution {
     public static Map<Double, String> labels = new HashMap<Double, String>();
 
+    static {
+        for (double i = 0; i < 5; i ++) {
+            labels.put((double)i, "Duck " + i);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(labels);
     }
