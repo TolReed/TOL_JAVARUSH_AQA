@@ -9,6 +9,9 @@ public class Solution {
 
     static {
         //throw an exception here - выбросьте эксепшн тут
+
+            int a = 42 / 0;
+
     }
 
     public static int B = 5;
