@@ -22,4 +22,76 @@ public class Solution {
             System.out.println();
         }
     }
+
+    public static void printMatrix(int m, short n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(int m, long n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(int m, char n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(int m, byte n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(int m, double n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(int m, float n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(short m, int n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrix(long m, int n, Object value) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value);
+            }
+            System.out.println();
+        }
+    }
 }
