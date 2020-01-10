@@ -4,7 +4,7 @@ package com.javarush.task.task14.task1416;
 Исправление ошибок
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) {
         Swimmable animal = new Orca();
         animal.swim();
@@ -23,10 +23,12 @@ public class Solution {/*
     }
 
     interface Swimmable {
-        void swim();
+        default void swim() {
+            System.out.println(this.getClass().getSimpleName() + " is swimming");
+        }
     }
 
-    static abstract class OceanAnimal {
+    static abstract class OceanAnimal implements Swimmable {
         public void swim() {
             OceanAnimal currentAnimal = (OceanAnimal) getCurrentAnimal();
             currentAnimal.displaySwim();
@@ -39,14 +41,33 @@ public class Solution {/*
         abstract Swimmable getCurrentAnimal();
     }
 
-    static class Orca {
+    static class Orca extends OceanAnimal {
+
+
+        @Override
+        Swimmable getCurrentAnimal() {
+            return this;
+        }
     }
 
-    static class Whale {
+    static class Whale extends OceanAnimal{
 
+        @Override
+        Swimmable getCurrentAnimal() {
+            return this;
+        }
     }
 
-    static class Otter {
+    static class Otter implements Swimmable, Walkable {
 
-    }*/
+        @Override
+        public void walk() {
+
+        }
+
+        @Override
+        public void swim() {
+
+        }
+    }
 }
