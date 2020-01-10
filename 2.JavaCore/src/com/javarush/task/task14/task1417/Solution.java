@@ -21,7 +21,10 @@ public class Solution {
         Person(String name) {
             this.name = name;
             this.allMoney = new ArrayList<Money>();
-            //напишите тут ваш код
+            //напишите тут ваш код - Заполни список allMoney объектами всех возможных, в рамках условия задачи и функциональности программы, валют.
+            allMoney.add(new Hrivna(277777.37));
+            allMoney.add(new Ruble(5550555.37));
+            allMoney.add(new USD(7777777.77));
         }
 
         private List<Money> allMoney;
