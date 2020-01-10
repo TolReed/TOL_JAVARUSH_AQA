@@ -1,5 +1,6 @@
 package com.javarush.task.task15.task1519;
 
+import javax.xml.soap.SOAPElementFactory;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -12,7 +13,26 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         //напиште тут ваш код
 
-        //fixit
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String s;
+        while (!(s = reader.readLine()).equals("exit")) {
+            try {
+                if (s.contains(".")) {
+                    print(Double.parseDouble(s));
+                } else if (Integer.parseInt(s) <= 0 || Integer.parseInt(s) >= 128 ) {
+                    print(Integer.parseInt(s));
+                } else if (Short.parseShort(s) > 0 || Short.parseShort(s) >= 128) {
+                    print(Short.parseShort(s));
+                } else {
+                    print(s);
+                }
+
+            } catch (NumberFormatException e) {
+
+                print(s);
+            }
+        }
     }
 
     public static void print(Double value) {
