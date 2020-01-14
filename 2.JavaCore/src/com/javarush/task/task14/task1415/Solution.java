@@ -19,6 +19,17 @@ public class Solution {
 
     public static void cleanAllApartments(List<Apartment> apartments) {
         //написать тут вашу реализацию пунктов 1-4
+        for (Apartment apartment: apartments) {
+            if (apartment instanceof OneRoomApt) {
+                ((OneRoomApt)apartment).clean1Room();
+            }
+            else if (apartment instanceof TwoRoomApt) {
+                ((TwoRoomApt)apartment).clean2Rooms();
+            }
+            else if (apartment instanceof ThreeRoomApt) {
+                ((ThreeRoomApt)apartment).clean3Rooms();
+            }
+        }
     }
 
     static interface Apartment {
@@ -42,3 +53,18 @@ public class Solution {
         }
     }
 }
+
+
+
+
+/*
+
+даже статейка есть тут, может поможет разобраться.
+https://javarush.ru/groups/posts/2019-rasshirenie-i-suzhenie-ssihlochnihkh-tipov
+
+Это приведение типов. То есть в списке apartments у тебя могут храниться объекты любого класса, реализующего интерфейс Apartment.
+При добавление объекта в список, он неявно преобразуется в тип Apartment (расширяется).
+Следовательно, вытаскиваешь ты из списка объект типа Apartment.
+Но интерфейс Apartment ничего не знает про методы clean1Room(), clean2Rooms(), clean3Rooms(), поэтому их нужно привести к соответствущему типу.
+
+*/
