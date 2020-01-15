@@ -4,7 +4,7 @@ package com.javarush.task.task15.task1520;
 Тренировка мозга
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) {
         Duck duck = new Duck();
         Util.fly(duck);
@@ -16,6 +16,11 @@ public class Solution {/*
         public void doAction() {
             System.out.println("Flying");
         }
+
+        @Override
+        public void doAnotherAction() {
+            System.out.println("Moving");
+        }
     }
 
     public static class Util {
@@ -24,7 +29,7 @@ public class Solution {/*
         }
 
         static void move(CanMove animal) {
-            animal.doAction();
+            animal.doAnotherAction();
         }
     }
 
@@ -34,5 +39,5 @@ public class Solution {/*
 
     public static interface CanMove {
         void doAnotherAction();
-    }*/
+    }
 }
