@@ -7,7 +7,7 @@ import java.util.List;
 ООП - книги
 */
 
-public class Solution {/*
+public class Solution {
     public static void main(String[] args) {
         List<Book> books = new LinkedList<Book>();
         books.add(new MarkTwainBook("Tom Sawyer"));
@@ -32,6 +32,13 @@ public class Solution {/*
 
             String output = "output";
             //Add your code here
+            if (author.equals("Agatha Christie")) {
+                output = agathaChristieOutput;
+            }
+            if (author.equals("Mark Twain")) {
+                output = markTwainOutput;
+            }
+
 
             return output;
         }
@@ -39,5 +46,42 @@ public class Solution {/*
         public String toString() {
             return getOutputByBookType();
         }
-    }*/
+    }
+
+
+    public static class MarkTwainBook extends Book {
+        String title;
+        public MarkTwainBook(String title) {
+            super("Mark Twain");
+            this.title = title;
+        }
+
+        @Override
+        public MarkTwainBook getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
+        }
+    }
+
+    public static class AgathaChristieBook extends Book {
+        String title;
+        public AgathaChristieBook(String title) {
+            super("Agatha Christie");
+            this.title = title;
+        }
+
+        @Override
+        public AgathaChristieBook getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
+        }
+    }
 }
