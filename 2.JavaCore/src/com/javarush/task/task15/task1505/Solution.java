@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* 
-ООП - исправь ошибки в наследовании
+ООП - исправь ошибки в наследовании - https://javarush.ru/help/29493
 */
 
 public class Solution {
     public static interface LivingPart {
-        boolean containsBones();
+        Object containsBones();
     }
 
     public static class BodyPart implements LivingPart {
@@ -19,12 +19,12 @@ public class Solution {
             this.name = name;
         }
 
-        public boolean containsBones() {
-            return true;
+        public Object containsBones() {
+            return "Yes";
         }
 
         public String toString() {
-            return containsBones() ? name + " содержит кости" : name + " не содержит кости";
+            return containsBones().equals("Yes") ? name + " содержит кости" : name + " не содержит кости";
         }
     }
 
@@ -36,8 +36,12 @@ public class Solution {
             this.isArtificial = isArtificial;
         }
 
-        public boolean containsBones() {
-            return super.containsBones() && !isArtificial;
+        public Object containsBones() {
+            if (super.containsBones().equals("Yes") && !isArtificial) {
+                return "Yes";
+            } else {
+                return "No";
+            }
         }
     }
 
