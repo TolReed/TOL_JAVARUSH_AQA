@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /* 
 Факториал
@@ -22,6 +23,22 @@ public class Solution {
     public static String factorial(int n) {
         //add your code here
 
-        return "";
+        BigInteger result = BigInteger.valueOf(1);
+
+        if (n < 0) {
+            return "0";
+        }
+        else if (n == 0) {
+            return "1";
+        }
+        else if (n > 0 && n <= 150) {
+
+            for (int i = 1; i <= n; i++) {
+                result = result.multiply(BigInteger.valueOf(i));
+            }
+
+        }
+        return result.toString();
     }
 }
+
