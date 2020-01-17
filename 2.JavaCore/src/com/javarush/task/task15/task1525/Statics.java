@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 public class Statics {
     public static String FILE_NAME = "/Users/anatolii.dudochkin/Desktop/Tol/tol.txt";/* add the path to your source file here */
+    // Инициализируй переменную Statics.FILE_NAME полным путем к файлу с данными, который содержит несколько строк.
 
 
 
