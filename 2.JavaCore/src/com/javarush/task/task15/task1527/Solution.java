@@ -44,7 +44,7 @@ public class Solution {
                             double d = Double.parseDouble(list.get(i).substring(list.get(i).indexOf("=") + 1, list.get(i).length()));
                             alert(d);
                         } catch (Exception e) {
-                            alert(list.get(i).substring(list.get(i).indexOf("=")+1, list.get(i).length()));
+                            alert(list.get(i).substring(list.get(i).indexOf("=")+1, list.get(i).length())); // works now, +1 to String
                         }
                 }
 
@@ -86,15 +86,6 @@ view
 name=Amigo
 
 Тебе нужно вывести сначала названия всех параметров, а потом, если среди них есть параметр obj, передать его значение в подходящий метод alert().
-
-
-
-
-
-
-
-
-
 
 
 a new solution below:
@@ -144,18 +135,7 @@ a new solution below:
     }
 }
 
-
-
-
-
 a new solution here is:
-
-
-
-
-
-
-
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = "";
