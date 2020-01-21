@@ -44,7 +44,7 @@ public class Solution {
                             double d = Double.parseDouble(list.get(i).substring(list.get(i).indexOf("=") + 1, list.get(i).length()));
                             alert(d);
                         } catch (Exception e) {
-                            alert(list.get(i).substring(list.get(i).indexOf("="), list.get(i).length()));
+                            alert(list.get(i).substring(list.get(i).indexOf("=")+1, list.get(i).length()));
                         }
                 }
 

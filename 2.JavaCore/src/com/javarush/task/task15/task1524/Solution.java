@@ -3,23 +3,26 @@ package com.javarush.task.task15.task1524;
 /* 
 Порядок загрузки переменных
 */
-
 public class Solution {
     static {
-        System.out.println("Static block");
+        init(); //bp2
+    }
+
+
+    static {
+        System.out.println("Static block"); //bp3
     }
 
     {
-        System.out.println("Non-static block");
+        System.out.println("Non-static block"); //bp5
         printAllFields(this);
     }
 
-    public int i = 6;
 
-    public String name = "First name";
-    static {
-        init();
-    }
+    public int i = 6; //bp7
+    public String name = "First name"; //bp8
+
+
 
     public Solution() {
         System.out.println("Solution constructor");
@@ -27,17 +30,18 @@ public class Solution {
     }
 
     public static void init() {
-        System.out.println("static void init()");
+        System.out.println("static void init()"); //bp1
     }
 
     public static void main(String[] args) {
-        System.out.println("public static void main");
+        System.out.println("public static void main"); //bp4
         Solution s = new Solution();
     }
 
     public static void printAllFields(Solution obj) {
-        System.out.println("static void printAllFields");
-        System.out.println(obj.name);
-        System.out.println(obj.i);
+        System.out.println("static void printAllFields"); //bp6
+
+        System.out.println(obj.i); //bp9
+        System.out.println(obj.name); //bp10
     }
 }
