@@ -7,7 +7,7 @@ import java.util.List;
 Вместе быстрее? Ща проверим :)
 */
 
-public class Solution {
+public class Solution {/*
     public static int threadCount = 10;
     public static int[] testArray = new int[1000];
 
@@ -50,6 +50,6 @@ public class Solution {
                 }
             }
         }
-    }
+    }*/
 }
 

@@ -6,7 +6,7 @@ import java.util.Date;
 Поговорим о музыке
 */
 
-public class Solution {
+public class Solution {/*
     public static int delay = 1000;
 
     public static void main(String[] args) {
@@ -44,5 +44,5 @@ public class Solution {
             System.out.println(this.owner + " is stopping playing");
             return new Date();
         }
-    }
+    }*/
 }

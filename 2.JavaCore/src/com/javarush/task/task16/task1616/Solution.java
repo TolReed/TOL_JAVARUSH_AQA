@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 Считаем секунды
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) throws IOException {
         InputStreamReader in = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(in);
@@ -33,5 +33,5 @@ public class Solution {
                 System.out.println(seconds);
             }
         }
-    }
+    }*/
 }

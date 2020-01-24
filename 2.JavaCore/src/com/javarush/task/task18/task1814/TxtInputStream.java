@@ -8,7 +8,7 @@ import java.io.IOException;
 UnsupportedFileName
 */
 
-public class TxtInputStream extends FileInputStream {
+/*public class TxtInputStream extends FileInputStream {
 
     public TxtInputStream(String fileName) {
     }
@@ -16,4 +16,4 @@ public class TxtInputStream extends FileInputStream {
     public static void main(String[] args) {
     }
 }
-
+*/

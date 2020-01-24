@@ -7,7 +7,7 @@ import java.util.List;
 Аптека
 */
 
-public class Solution {
+public class Solution {/*
     public static DrugsController drugsController = new DrugsController();
     public static boolean isStopped = false;
 
@@ -47,5 +47,5 @@ public class Solution {
             Thread.sleep(100);
         } catch (InterruptedException e) {
         }
-    }
+    }*/
 }

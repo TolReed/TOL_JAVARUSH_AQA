@@ -1,6 +1,6 @@
 package com.javarush.task.task16.task1626;
 
-public class Solution {
+public class Solution {/*
     public static int number = 5;
 
     public static void main(String[] args) {
@@ -31,5 +31,5 @@ public class Solution {
         public String toString() {
             return Thread.currentThread().getName() + ": " + countIndexDown;
         }
-    }
+    }*/
 }

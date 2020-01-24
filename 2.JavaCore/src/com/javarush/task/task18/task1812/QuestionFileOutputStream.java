@@ -6,7 +6,7 @@ import java.io.*;
 Расширяем AmigoOutputStream
 */
 
-public class QuestionFileOutputStream implements AmigoOutputStream {
+/*public class QuestionFileOutputStream implements AmigoOutputStream {
 
-}
+}*/
 

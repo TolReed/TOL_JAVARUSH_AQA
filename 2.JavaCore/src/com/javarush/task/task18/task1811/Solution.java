@@ -4,7 +4,7 @@ package com.javarush.task.task18.task1811;
 Wrapper (Decorator)
 */
 
-public class Solution {
+public class Solution {/*
 
     public static void main(String[] args) {
         new Thread(new DecoratorRunnableImpl(new DecoratorMyRunnableImpl(new RunnableImpl()))).start();
@@ -30,5 +30,5 @@ public class Solution {
             component.run();
         }
     }
-
+*/
 }

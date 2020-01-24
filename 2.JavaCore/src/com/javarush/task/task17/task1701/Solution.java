@@ -7,7 +7,7 @@ import java.util.List;
 Заметки
 */
 
-public class Solution {
+public class Solution {/*
     public static void main(String[] args) {
         new NoteThread().start();
         new NoteThread().start();
@@ -31,5 +31,5 @@ public class Solution {
                 System.out.println("Нить [" + threadName + "] удалила свою заметку [" + note + "]");
             }
         }
-    }
+    }*/
 }
