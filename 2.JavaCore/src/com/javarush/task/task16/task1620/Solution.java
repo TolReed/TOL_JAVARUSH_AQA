@@ -7,7 +7,7 @@ import java.util.List;
 Один для всех, все - для одного
 */
 
-public class Solution {
+public class Solution { // - https://javarush.ru/help/20414
     public static byte threadCount = 3;
     static List<Thread> threads = new ArrayList<Thread>(threadCount);
 
@@ -19,6 +19,15 @@ public class Solution {
 
     public static void ourInterruptMethod() {
         //add your code here - добавь код тут
+        for (int i = 0; i < threads.size(); i++) {
+            threads.get(i).interrupt();
+        }
+
+    /* or
+        for (Thread x : threads) {
+          x.interrupt();
+          }
+    */
     }
 
     private static void initThreadsAndStart() {
@@ -41,8 +50,8 @@ public class Solution {
 
         public void run() {
             //fix 2 variables - исправь 2 переменных
-            boolean isCurrentThreadInterrupted = false;
-            String threadName = "";
+            boolean isCurrentThreadInterrupted = Thread.currentThread().isInterrupted();
+            String threadName = Thread.currentThread().getName();
 
             try {
                 while (!isCurrentThreadInterrupted) {
