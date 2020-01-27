@@ -39,6 +39,21 @@ public class Solution {
 
         private void printTime() throws InterruptedException {
             //add your code here - добавь код тут
+            Thread.sleep(1000);
+            if (seconds < 59) {
+                seconds ++;
+            } else if (minutes < 59) {
+                seconds = 0;
+                minutes++;
+            } else if (hours < 23) {
+                seconds = 0;
+                minutes = 0;
+                hours ++;
+            } else {
+                minutes = 0;
+                seconds = 0;
+                hours = 0;
+            }
 
             if (hours == 0 && minutes == 0 && seconds == 0) {
                 System.out.println(String.format("В г. %s сейчас полночь!", cityName));
