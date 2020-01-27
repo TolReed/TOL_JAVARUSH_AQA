@@ -11,6 +11,11 @@ public class Solution {
     }
 
     private static void investigateWorld() {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -18,7 +23,7 @@ public class Solution {
         protected Kitten kitten1;
         protected Kitten kitten2;
 
-        public Cat(String name) {
+        public Cat(String name) throws InterruptedException {
             super(name);
             kitten1 = new Kitten("Котенок 1, мама - " + getName());
             kitten2 = new Kitten("Котенок 2, мама - " + getName());
@@ -28,6 +33,7 @@ public class Solution {
         public void run() {
             System.out.println(getName() + " родила 2 котенка");
             try {
+
                 initAllKittens();
             } catch (InterruptedException e) {
             }
@@ -37,6 +43,8 @@ public class Solution {
         private void initAllKittens() throws InterruptedException {
             kitten1.start();
             kitten2.start();
+            kitten1.join();
+            kitten2.join();
         }
     }
 
