@@ -1,6 +1,6 @@
 package com.javarush.task.task16.task1626;
 
-public class Solution {/*
+public class Solution {
     public static int number = 5;
 
     public static void main(String[] args) {
@@ -8,9 +8,28 @@ public class Solution {/*
         new Thread(new CountUpRunnable(), "Увеличиваем").start();
     }
 
-    public static class CountUpRunnable {
+    public static class CountUpRunnable implements Runnable {
         //Add your code here - добавь код тут
+        private int countIndexUp = 1;
+
+        public void run() {
+            try {
+                while (true) {
+                    Thread.sleep(500);
+                    System.out.println(toString());
+                    if (countIndexUp == Solution.number) return;
+                    countIndexUp += 1;
+
+                }
+            } catch (InterruptedException e) {
+            }
+        }
+
+        public String toString() {
+            return Thread.currentThread().getName() + ": " + countIndexUp;
+        }
     }
+
 
 
     public static class CountdownRunnable implements Runnable {
@@ -31,5 +50,5 @@ public class Solution {/*
         public String toString() {
             return Thread.currentThread().getName() + ": " + countIndexDown;
         }
-    }*/
+    }
 }
