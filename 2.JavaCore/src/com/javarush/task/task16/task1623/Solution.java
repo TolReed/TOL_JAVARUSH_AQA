@@ -12,6 +12,25 @@ public class Solution {
         System.out.println(new GenerateThread());
     }
 
-    public static class GenerateThread {
-    }
+    public static class GenerateThread extends Thread {
+
+        @Override
+        public void run() {
+            if (createdThreadCount < count) {
+                System.out.println (new GenerateThread());
+            }
+        }
+
+        @Override
+        public String toString() {
+            return getName() + " created";
+        }
+
+        public GenerateThread() {
+            super(String.valueOf(++createdThreadCount));
+            start();
+
+
+        }
+    } //С if каждая нить будет создавать только одну "дочернюю" нить. С while - столько, сколько успеет до переполнения счетчика.
 }
