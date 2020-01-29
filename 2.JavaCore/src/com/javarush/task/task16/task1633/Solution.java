@@ -1,6 +1,6 @@
 package com.javarush.task.task16.task1633;
 
-public class Solution {
+public class Solution { //https://javarush.ru/help/13481 & https://javarush.ru/help/34714 & https://javarush.ru/help/10988
     public static Thread.UncaughtExceptionHandler handler = new OurUncaughtExceptionHandler();
 
     public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Solution {
 
     public static class TestedThread extends Thread {
         public TestedThread(Thread.UncaughtExceptionHandler handler) {
-            setUncaughtExceptionHandler(handler);
+            setDefaultUncaughtExceptionHandler(handler); // was settUncaughtExceptionHandler(handler);
             start();
         }
 
