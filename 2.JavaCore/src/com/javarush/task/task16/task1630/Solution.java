@@ -1,15 +1,22 @@
 package com.javarush.task.task16.task1630;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
-public class Solution {/*
+public class Solution {
     public static String firstFileName;
-    public static String secondFileName;
+    public static String secondFileName; //https://javarush.ru/help/35255
 
     //add your code here - добавьте код тут
+    static {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            firstFileName = reader.readLine();
+            secondFileName = reader.readLine();
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) throws InterruptedException {
         systemOutPrintln(firstFileName);
@@ -21,6 +28,8 @@ public class Solution {/*
         f.setFileName(fileName);
         f.start();
         //add your code here - добавьте код тут
+
+        f.join();
         System.out.println(f.getFileContent());
     }
 
@@ -33,7 +42,40 @@ public class Solution {/*
         void join() throws InterruptedException;
 
         void start();
-    }*/
+    }
 
     //add your code here - добавьте код тут
+    public static class ReadFileThread extends Thread implements ReadFileInterface {
+
+        String text = "";
+        String fileName;
+
+        @Override
+        public void setFileName(String fullFileName) {
+            fileName = fullFileName;
+
+        }
+
+        @Override
+        public String getFileContent() {
+            return text;
+        }
+
+        @Override
+        public void run() {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
+                String i;
+                while ((i = reader.readLine()) != null) {
+                    text += i + " ";
+                }
+                reader.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
 }
