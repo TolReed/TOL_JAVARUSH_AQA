@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Solution {
+public class Solution { //https://javarush.ru/help/2488 & https://javarush.ru/help/34493
     public static volatile AtomicInteger readStringCount = new AtomicInteger(0);
     public static volatile BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -42,6 +42,28 @@ public class Solution {
 
         public void run() {
             //add your code here - добавьте код тут
+            while (!isInterrupted()) {
+                // В блок synchronized нити входят по очереди
+                synchronized (reader) {
+                    // Сразу проверяем а не прерван ли уже поток и если да - прерываем цикл.
+                    if (isInterrupted()) {
+                        break;
+                    }
+                    try {
+                        // Только если в буфере есть данные.
+                        if (reader.ready()) {
+                            String line = reader.readLine();
+                            result.add(line);
+                            readStringCount.incrementAndGet();
+
+                            System.out.println(result);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
         }
 
         @Override
