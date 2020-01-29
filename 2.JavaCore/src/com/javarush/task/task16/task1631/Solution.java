@@ -8,5 +8,3 @@ public class Solution {
         ImageReader reader = ImageReaderFactory.getImageReader(ImageTypes.JPG);
     }
 }
-
-

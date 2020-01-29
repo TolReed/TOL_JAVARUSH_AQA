@@ -14,7 +14,10 @@ public class ImageReaderFactory {
             return new JpgReader();
         } else {
             throw new IllegalArgumentException("Неизвестный тип картинки");
+
         }
+        //System.out.println("wow");
+
     }
 }
 /*
