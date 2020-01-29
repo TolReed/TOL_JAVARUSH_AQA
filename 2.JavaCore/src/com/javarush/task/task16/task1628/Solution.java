@@ -57,6 +57,7 @@ public class Solution { //https://javarush.ru/help/2488 & https://javarush.ru/he
                             readStringCount.incrementAndGet();
 
                             System.out.println(result);
+                            System.out.println("wow");
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
