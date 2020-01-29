@@ -7,7 +7,7 @@ import java.util.List;
 Вместе быстрее? Ща проверим :)
 */
 
-public class Solution {/*
+public class Solution {
     public static int threadCount = 10;
     public static int[] testArray = new int[1000];
 
@@ -33,6 +33,14 @@ public class Solution {/*
         System.out.println((result.toString()).equals(expectedResult.toString()));
     }
 
+
+    public static class SortThread extends Thread {
+        @Override
+        public void run() {
+            Solution.sort(testArray);
+        }
+    }
+
     public static void initThreads() throws InterruptedException {
         List<Thread> threads = new ArrayList<Thread>(threadCount);
         for (int i = 0; i < threadCount; i++) threads.add(new SortThread());
@@ -50,6 +58,6 @@ public class Solution {/*
                 }
             }
         }
-    }*/
+    }
 }
 
