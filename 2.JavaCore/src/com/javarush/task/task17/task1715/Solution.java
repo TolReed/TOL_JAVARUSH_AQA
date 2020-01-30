@@ -7,7 +7,7 @@ import java.util.List;
 Аптека
 */
 
-public class Solution {/*
+public class Solution {
     public static DrugsController drugsController = new DrugsController();
     public static boolean isStopped = false;
 
@@ -24,12 +24,35 @@ public class Solution {/*
         isStopped = true;
     }
 
-    public static class Apteka {
+    public static class Apteka implements Runnable {
 
+        @Override
+        public void run() {
+
+            while (!isStopped) {
+                drugsController.buy(getRandomDrug(), getRandomCount());
+
+                int i = 0;
+                while (i < 3) {
+                    waitAMoment();
+                    i++;
+                }
+            }
+        }
     }
 
-    public static class Person {
+    public static class Person implements Runnable {
 
+        @Override
+        public void run() {
+
+
+            while (!isStopped) {
+                drugsController.sell(getRandomDrug(), getRandomCount());
+                waitAMoment();
+            }
+
+        }
     }
 
     public static int getRandomCount() {
@@ -47,5 +70,5 @@ public class Solution {/*
             Thread.sleep(100);
         } catch (InterruptedException e) {
         }
-    }*/
+    }
 }
