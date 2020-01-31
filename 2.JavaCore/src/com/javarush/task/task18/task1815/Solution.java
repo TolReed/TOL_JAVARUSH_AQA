@@ -7,8 +7,28 @@ import java.util.List;
 */
 
 public class Solution {
-    public class TableInterfaceWrapper {
+    public class TableInterfaceWrapper implements TableInterface {
+        private TableInterface component;
 
+        public TableInterfaceWrapper(TableInterface component) {
+            this.component = component;
+        }
+
+        @Override
+        public void setModel(List rows) {
+            System.out.println(rows.size());
+            component.setModel(rows);
+        }
+
+        @Override
+        public String getHeaderText() {
+            return  component.getHeaderText().toUpperCase();
+        }
+
+        @Override
+        public void setHeaderText(String newHeaderText) {
+            component.setHeaderText(newHeaderText);
+        }
     }
 
     public interface TableInterface {
