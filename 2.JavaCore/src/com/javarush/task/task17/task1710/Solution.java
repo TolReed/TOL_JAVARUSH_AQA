@@ -67,9 +67,6 @@ public class Solution { //https://javarush.ru/help/29258 & https://javarush.ru/h
                     System.out.println(allPeople.get(i).getName() + " " + "ж" + " " + dateFormat.format(allPeople.get(i).getBirthDate()));
                 }
             }
-
-        } catch (Exception e) {
-
-        }
+        } catch (Exception e) {        }
     }
 }
