@@ -3,7 +3,7 @@ package com.javarush.task.task20.task2016;
 /* 
 Минимум изменений
 */
-public class Solution {
+public class Solution { //https://javarush.ru/help/10267 https://javarush.ru/help/3995
     public class A {
         String name = "A";
 
