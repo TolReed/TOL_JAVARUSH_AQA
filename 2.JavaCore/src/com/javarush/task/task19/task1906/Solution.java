@@ -4,7 +4,37 @@ package com.javarush.task.task19.task1906;
 Четные символы
 */
 
-public class Solution {
-    public static void main(String[] args) {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Solution { //https://javarush.ru/help/29639
+    public static void main(String[] args) throws IOException {
+
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String fileName = reader.readLine();
+        String fileName1 = reader.readLine();
+        FileReader fileReader = new FileReader(fileName);
+        FileWriter fileWriter = new FileWriter(fileName1);
+        ArrayList<Integer> arr = new ArrayList<>();
+
+        while (fileReader.ready()){
+            int data = fileReader.read();
+            arr.add(data);
+        }
+
+
+
+        for (int i = 0; i < arr.size(); i++){
+
+            if ((i + 1) % 2 == 0){
+                fileWriter.write(arr.get(i));
+            }
+        }
+
+        reader.close();
+        fileReader.close();
+        fileWriter.close();
+
     }
 }
