@@ -10,13 +10,15 @@ import java.util.Map;
 public class Solution {
     public static Map<String, String> countries = new HashMap<String, String>();
 
+    static {
+        countries.put("UA", "Ukraine");
+        countries.put("RU", "Russia");
+        countries.put("CA", "Canada");}
+
+
     public static void main(String[] args) {
 
     }
-
-    public static class IncomeDataAdapter {
-    }
-
 
     public static interface IncomeData {
         String getCountryCode();        //For example: UA
@@ -42,5 +44,41 @@ public class Solution {
         String getName();               //For example: Ivanov, Ivan
 
         String getPhoneNumber();        //For example: +38(050)123-45-67
+    }
+
+    public static class IncomeDataAdapter implements Customer, Contact {
+        private IncomeData data;
+
+        public IncomeDataAdapter(IncomeData data) {
+            this.data = data;
+        }
+
+        public IncomeData getIncomeData() {
+            return data;
+        }
+
+        @Override
+        public String getCompanyName() {
+            return data.getCompany();
+        }
+
+        @Override
+        public String getCountryName() {
+            String countryCode = data.getCountryCode();
+            return countries.get(countryCode);
+        }
+
+        @Override
+        public String getName() {
+            String name = data.getContactLastName() + ", " + data.getContactFirstName();
+            return name;
+        }
+
+        @Override
+        public String getPhoneNumber() {
+            String number = String.format("%010d", data.getPhoneNumber());
+            number = "+" + data.getCountryPhoneCode() + "(" + number.substring(0, 3) + ")" + number.substring(3, 6) + "-" + number.substring(6, 8) + "-" + number.substring(8);
+            return number;
+        }
     }
 }
