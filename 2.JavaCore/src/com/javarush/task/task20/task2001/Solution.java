@@ -12,9 +12,9 @@ public class Solution {
     public static void main(String[] args) {
         //исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
-            File your_file_name = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(your_file_name);
-            InputStream inputStream = new FileInputStream(your_file_name);
+            //File your_file_name = File.createTempFile("your_file_name", null);
+            OutputStream outputStream = new FileOutputStream("D:1.txt");
+            InputStream inputStream = new FileInputStream("D:2.txt");
 
             Human ivanov = new Human("Ivanov", new Asset("home", 999_999.99), new Asset("car", 2999.99));
             ivanov.save(outputStream);
@@ -39,6 +39,7 @@ public class Solution {
         public List<Asset> assets = new ArrayList<>();
 
         public Human() {
+
         }
 
         public Human(String name, Asset... assets) {
@@ -68,10 +69,45 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            PrintWriter writer = new PrintWriter(outputStream);
+            String isName = this.name != null ? "yes" : "no";
+            String isAsset = this.assets.size() > 0 ? "yes" : "no";
+
+            writer.println(isName);
+            writer.println(isAsset);
+
+            if (isName.equals("yes")) {
+                writer.println(this.name);
+            }
+
+            if (isAsset.equals("yes")) {
+                for(Asset a : assets) {
+                    writer.println(a.getName());
+                    writer.println(a.getPrice());
+                }
+            }
+            writer.flush();
+            writer.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            String isNamePresent = reader.readLine();
+            String isAssetPresent = reader.readLine();
+
+            if (isNamePresent.equals("yes")) {
+                this.name = reader.readLine();
+            }
+
+            if (isAssetPresent.equals("yes")) {
+                while (reader.ready()) {
+                    Asset asset =  new Asset(reader.readLine(), Double.parseDouble(reader.readLine()));
+                    this.assets.add(asset);
+                }
+            }
+
+            reader.close();
         }
     }
 }
