@@ -1,12 +1,10 @@
 package com.javarush.task.task19.task1905;
 
-import com.sun.org.apache.bcel.internal.classfile.Constant;
-
 import java.util.HashMap;
 import java.util.Map;
 
 /*
-Закрепляем адаптер
+Закрепляем адаптер https://javarush.ru/help/20692
 */
 
 public class Solution {
