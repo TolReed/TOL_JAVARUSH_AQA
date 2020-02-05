@@ -17,14 +17,14 @@ public class Solution {
      * for displaying the [greeting] variable to the console.
      * @author JavaRush
      */
-    public static class OutputToConsole implements Serializable {
+    /*public static class OutputToConsole implements Serializable {
         private int counter;
 
         /**
          * @param out A stream for externalization
          * @throws java.io.IOException
          */
-        @Override
+       /* @Override
         public void writeExternal(ObjectOutput out) throws IOException {
             out.writeInt(counter);
         }
@@ -34,7 +34,7 @@ public class Solution {
          * @throws java.io.IOException
          * @throws ClassNotFoundException
          */
-        @Override
+        /*@Override
         public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
             counter = in.readInt();
         }
@@ -42,14 +42,14 @@ public class Solution {
         /**
          * Class constructor that sets the private counter field.
          */
-        public OutputToConsole(int counter) {
+        /*public OutputToConsole(int counter) {
             this.counter = counter;
         }
 
         /**
          * Prints greeting message to console counter times.
          */
-        public void printMessage() {
+        /*public void printMessage() {
             for (int i = 0; i < counter; i++) {
                 System.out.println(greeting);
             }
@@ -58,5 +58,5 @@ public class Solution {
 
     public static void main(String[] args) {
 
-    }
+    }*/
 }

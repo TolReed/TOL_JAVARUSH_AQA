@@ -8,7 +8,7 @@ import java.io.Serializable;
 /* 
 Переопределение сериализации
 */
-public class Solution implements {
+/*public class Solution implements {
     private Thread runner;
     private int speed;
 
@@ -29,7 +29,7 @@ public class Solution implements {
      private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException
      Теперь сериализация/десериализация пойдет по нашему сценарию :)
      */
-    private void writeObject(ObjectOutputStream out) throws IOException {
+    /*private void writeObject(ObjectOutputStream out) throws IOException {
         out.defaultWriteObject();
     }
 
@@ -41,3 +41,4 @@ public class Solution implements {
 
     }
 }
+*/

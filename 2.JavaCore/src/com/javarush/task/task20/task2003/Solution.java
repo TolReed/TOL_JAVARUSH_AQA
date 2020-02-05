@@ -5,7 +5,7 @@ import java.io.*;
 /* 
 Знакомство с properties
 */
-public class Solution {
+/*public class Solution {
     public static Map<String, String> properties = new HashMap<>();
 
     public void fillInPropertiesMap() {
@@ -24,3 +24,4 @@ public class Solution {
 
     }
 }
+*/
