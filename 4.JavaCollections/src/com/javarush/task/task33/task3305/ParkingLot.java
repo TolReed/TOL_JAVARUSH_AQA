@@ -1,27 +1,32 @@
 package com.javarush.task.task33.task3305;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.util.List;
 
+@JsonTypeInfo(use = JsonTypeInfo.Id.MINIMAL_CLASS, include = JsonTypeInfo.As.PROPERTY,  property="className")
+@JsonSubTypes(@JsonSubTypes.Type(value=ParkingLot.class))
 public class ParkingLot {
     public String name;
     public String city;
-    public List<Vehicle> vehicles;
+    public List<Vehicle> autos;
 
     public ParkingLot(String name, String city) {
         this.name = name;
         this.city = city;
     }
 
-    public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles = vehicles;
+    public void setVehicles(List<Vehicle> autos) {
+        this.autos = autos;
     }
 
     @Override
     public String toString() {
-        return "ParkingLot{" +
+        return "Parking{" +
                 "name='" + name + '\'' +
                 ", city='" + city + '\'' +
-                ", vehicles=" + vehicles +
+                ", autos=" + autos +
                 '}';
     }
 }
