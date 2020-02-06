@@ -20,7 +20,7 @@ import java.util.ArrayList;
 3. Класс Dog должен быть помечен как готовый к сериализации в JSON.
 4. Все данные у классов Pet, Cat, Dog должны сериализоваться.
 */
-public class Solution {
+public class Solution { //https://javarush.ru/quests/lectures/questcollections.level03.lecture03
     public static void main(String[] args) throws IOException {
         Cat cat = new Cat();
         cat.name = "Murka";
