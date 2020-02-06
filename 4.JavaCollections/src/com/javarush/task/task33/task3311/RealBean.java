@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +14,7 @@ public class RealBean {
     protected final int id;
     protected final String name;
 
+    @JsonSerialize
     protected Map<String, Object> additionalMap = new HashMap<>();
 
     @JsonCreator
@@ -28,6 +31,7 @@ public class RealBean {
         return name;
     }
 
+    @JsonAnySetter(as = HashMap.class, keyAs = String.class)
     public Map<String, Object> getAdditionalMap() {
         return additionalMap;
     }
