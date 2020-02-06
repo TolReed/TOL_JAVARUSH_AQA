@@ -1,10 +1,13 @@
 package com.javarush.task.task33.task3301;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 
-/* 
+/*
 Первая сериализация в JSON
 */
 public class Solution {
@@ -34,17 +37,20 @@ public class Solution {
         mapper.writeValue(writer, object);
     }
 
+    @JsonAutoDetect
     public static class Pet {
-        String name;
+        public String name;
     }
 
+    @JsonAutoDetect
     public static class Cat extends Pet {
-        int age;
-        int weight;
+        public int age;
+        public int weight;
     }
 
+    @JsonAutoDetect
     public static class Dog extends Pet {
-        int age;
-        String owner;
+        public int age;
+        public String owner;
     }
 }
