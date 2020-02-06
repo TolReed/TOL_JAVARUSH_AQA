@@ -1,120 +1,170 @@
 package com.javarush.task.task20.task2028;
 
-import java.util.List;
+import java.io.Serializable;
+import java.util.*;
 
-/* 
-Построй дерево(1)
+/*
+Построй дерево(1) https://javarush.ru/help/19629 && https://javarush.ru/help/30724 && https://javarush.ru/help/20057
 */
 
-
-import java.io.Serializable;
-import java.util.AbstractList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
-import java.util.stream.Stream;
-
-
-public class CustomTree extends AbstractList<String> implements Cloneable, Serializable{
-
+public class CustomTree extends AbstractList<String> implements Cloneable, Serializable {
     Entry<String> root;
+    public ArrayList<Entry> entries = new ArrayList<>();
 
-    @Override
-    public String get(int index){
-        throw new UnsupportedOperationException("Method is not supported!!!");
+    public CustomTree() {
+        root = new Entry<>("0");
+        entries.add(root);
     }
 
     @Override
-    public String set(int index, String element){
-        throw new UnsupportedOperationException("Method is not supported!!!");
+    public boolean add(String s) {
+        Entry<String> newEntry = new Entry<>(s);
+        boolean flag = false;
+
+        for (Entry entry : entries) {
+
+            if (entry.availableToAddLeftChildren) {
+                entry.leftChild = newEntry;
+                entry.availableToAddLeftChildren = false;
+                newEntry.parent = entry;
+                entries.add(newEntry);
+                flag = true;
+                break;
+            }
+            else if (entry.availableToAddRightChildren) {
+                entry.rightChild = newEntry;
+                entry.availableToAddRightChildren = false;
+                newEntry.parent = entry;
+                entries.add(newEntry);
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag) {
+            for (Entry entry : entries) {
+                if (entry.leftChild == null) {
+                    entry.availableToAddLeftChildren = true;
+                    entry.availableToAddRightChildren = true;
+                }
+            }
+            add(s);
+        }
+
+        return true;
     }
 
-    @Override
-    public void add(int index, String element){
-        throw new UnsupportedOperationException("Method is not supported!!!");
+    public boolean remove(Object o) {
+        String s;
+        try {
+            s = (String) o;
+        } catch (Exception e) {
+            throw new UnsupportedOperationException();
+        }
+
+        //Find entry and set null
+        for (Entry entry : entries) {
+            if (entry.elementName.equals(s)) {
+                if (entry.parent.leftChild == entry) {
+                    entry.parent.leftChild = null;
+                }
+                else
+                    entry.parent.rightChild = null;
+
+
+                entries.remove(entry);
+                break;
+            }
+        }
+
+        //Remove entries
+        ArrayList<Entry> toRemove = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (entry != root && !entries.contains(entry.parent)) {
+                toRemove.add(entry);
+            }
+        }
+        entries.removeAll(toRemove);
+
+
+        return true;
     }
-
-    @Override
-    public String remove(int index){
-        throw new UnsupportedOperationException("Method is not supported!!!");
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends String> c){
-        throw new UnsupportedOperationException("Method is not supported!!!");
-    }
-
-    @Override
-    public List<String> subList(int fromIndex, int toIndex){
-        throw new UnsupportedOperationException("Method is not supported!!!");
-    }
-
-    @Override
-    protected void removeRange(int fromIndex, int toIndex){
-        throw new UnsupportedOperationException("Method is not supported!!!");
-    }
-
-    @Override
-    public int size(){
-        return 0;
-    }
-
-    @Override
-    public void replaceAll(UnaryOperator<String> operator){
-
-    }
-
-    @Override
-    public Spliterator<String> spliterator(){
-        return null;
-    }
-
-    @Override
-    public boolean removeIf(Predicate<? super String> filter){
-        return false;
-    }
-
-    @Override
-    public Stream<String> stream(){
-        return null;
-    }
-
-    @Override
-    public Stream<String> parallelStream(){
-        return null;
-    }
-
-    @Override
-    public void forEach(Consumer<? super String> action){
-
-    }
-
     static class Entry<T> implements Serializable{
-        private String elementName;
-        private int lineNumber;
-        private boolean availableToAddLeftChildren, availableToAddRightChildren;
-        private Entry<T> parent, leftChild, rightChild;
+        String elementName;
+        boolean availableToAddLeftChildren, availableToAddRightChildren;
+
+        Entry<T> parent, leftChild, rightChild;
 
         public Entry(String elementName) {
             this.elementName = elementName;
-            this.availableToAddLeftChildren = true;
-            this.availableToAddRightChildren = true;
+            availableToAddLeftChildren = true;
+            availableToAddRightChildren = true;
+
+        }
+        public boolean isAvailableToAddChildren() {
+            return availableToAddLeftChildren || availableToAddRightChildren;
         }
 
-        public void checkChildren(){
-            if (rightChild != null) {
-                availableToAddRightChildren = false;
-            }
-            if (leftChild != null) {
-                this.availableToAddLeftChildren = false;
-            }
-        }
+    }
 
-        public boolean isAvailableToAddChildren(){
-            return availableToAddLeftChildren||availableToAddRightChildren;
+    @Override
+    public String get(int index) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends String> c) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    protected void removeRange(int fromIndex, int toIndex) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public List<String> subList(int fromIndex, int toIndex) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public String set(int index, String element) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void add(int index, String element) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public String remove(int index) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public int size() {
+        int size = -1;
+        ArrayList<Entry<String>> intQueue = new ArrayList<Entry<String>>();
+        intQueue.add(root);
+
+        while (! intQueue.isEmpty()){
+            Entry<String> current = intQueue.remove(0);
+            size++;
+            if (current.leftChild != null){ intQueue.add(current.leftChild); }
+
+            if (current.rightChild != null){ intQueue.add(current.rightChild); }
         }
+        return size;
+    }
+
+    public String getParent(String s) {
+        final String[] result = new String[1];
+        entries.forEach(k -> {
+            if (k.elementName.equals(s)) {
+                result[0] = k.parent.elementName;
+            }
+        });
+        return result[0];
     }
 }
