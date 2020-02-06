@@ -15,6 +15,16 @@ public class Solution {
     }
 
     public static StringWriter getAllDataFromInputStream(InputStream is) throws IOException {
-        return null;
+        StringWriter sw = new StringWriter();
+        if (sw == null || is.available() <= 0) {
+            return sw;
+        }
+
+        while (is.available() > 0) {
+            sw.write(is.read());
+        }
+
+        sw.flush();
+        return sw;
     }
 }
