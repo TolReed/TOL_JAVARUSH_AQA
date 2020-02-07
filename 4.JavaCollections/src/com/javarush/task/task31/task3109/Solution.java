@@ -1,8 +1,11 @@
 package com.javarush.task.task31.task3109;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
-/* 
+/*
 Читаем конфиги
 */
 public class Solution {
@@ -19,6 +22,16 @@ public class Solution {
     }
 
     public Properties getProperties(String fileName) {
-        return null;
+        Properties result = new Properties();
+        try {
+            FileInputStream fis = new FileInputStream(fileName);
+            if (Paths.get(fileName).getFileName().toString().endsWith(".xml")) {
+                result.loadFromXML(fis);
+            } else {
+                result.load(fis);
+            }
+        } catch (IOException e) {
+        }
+        return result;
     }
 }
