@@ -1,7 +1,7 @@
 package com.javarush.task.task32.task3212;
 
-        import com.javarush.task.task32.task3212.contex.InitialContext;
-        import com.javarush.task.task32.task3212.service.Service;
+import com.javarush.task.task32.task3212.contex.InitialContext;
+import com.javarush.task.task32.task3212.service.Service;
 
 
 public class ServiceLocator {
@@ -12,15 +12,23 @@ public class ServiceLocator {
     }
 
     /**
-     * First, check for a service object in the cache
-     * If a service object is not in the cache, perform a lookup using
-     * the JNDI initial context and get the service object. Add it to
+     * First check the service object available in cache
+     * If service object not available in cache do the lookup using
+     * JNDI initial context and get the service object. Add it to
      * the cache for future use.
      *
-     * @param jndiName The name of the service object in the context
-     * @return Object mapped to the name in context
+     * @param jndiName The name of service object in context
+     * @return Object mapped to name in context
      */
     public static Service getService(String jndiName) {
-        return null;
+        Service service = cache.getService(jndiName);
+        if (service != null)
+            return service;
+
+        InitialContext context = new InitialContext();
+        service = (Service) context.lookup(jndiName);
+        cache.addService(service);
+
+        return service;
     }
 }
