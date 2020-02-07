@@ -7,13 +7,13 @@ import java.io.*;
 */
 public class Solution {
     public static void main(String[] args) {
-        //you can find your_file_name.tmp in your TMP directory or adjust outputStream/inputStream according to your file's actual location
+        //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 
-            File yourFile = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(yourFile);
-            InputStream inputStream = new FileInputStream(yourFile);
+            File your_file_name = File.createTempFile("your_file_name", null);
+            OutputStream outputStream = new FileOutputStream(your_file_name);
+            InputStream inputStream = new FileInputStream(your_file_name);
 
             ClassWithStatic classWithStatic = new ClassWithStatic();
             classWithStatic.i = 3;
@@ -27,31 +27,47 @@ public class Solution {
             loadedObject.j = 7;
 
             loadedObject.load(inputStream);
-            //here check that the classWithStatic object is equal to the loadedObject object - проверьте тут, что classWithStatic и loadedObject равны
+            //check here that classWithStatic object equals to loadedObject object - проверьте тут, что classWithStatic и loadedObject равны
+            if (classWithStatic.equals(loadedObject)) {
+                System.out.println("Objects are equal.");
+            } else {
+                System.out.println("Objects not are equal.");
+            }
 
             outputStream.close();
             inputStream.close();
 
         } catch (IOException e) {
             //e.printStackTrace();
-            System.out.println("Oops, something is wrong with my file");
+            System.out.println("Oops, something wrong with my file");
         } catch (Exception e) {
             //e.printStackTrace();
-            System.out.println("Oops, something is wrong with the save/load method");
+            System.out.println("Oops, something wrong with save/load method");
         }
     }
 
     public static class ClassWithStatic {
-        public static String staticString = "This is a static test string";
+        public static String staticString = "it's test static string";
         public int i;
         public int j;
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            DataOutputStream out = new DataOutputStream(
+                    new BufferedOutputStream(outputStream));
+            out.writeUTF(ClassWithStatic.staticString);
+            out.writeInt(i);
+            out.writeInt(j);
+            out.flush();
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+            DataInputStream in = new DataInputStream(
+                    new BufferedInputStream(inputStream));
+            ClassWithStatic.staticString = in.readUTF();
+            i = in.readInt();
+            j = in.readInt();
         }
 
         @Override
