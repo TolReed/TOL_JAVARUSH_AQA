@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Zoo {
     public List<Animal> animals = new ArrayList<>();
 
@@ -15,22 +14,18 @@ public class Zoo {
     @JsonSubTypes({
             @JsonSubTypes.Type(value = Zoo.Dog.class, name = "dog"),
             @JsonSubTypes.Type(value = Zoo.Cat.class, name = "cat"),
-
     })
+
     public static class Animal {
         public Animal(String name) {
             this.name = name;
         }
-
         public String name;
     }
 
     @JsonTypeName ("dog")
     public static class Dog extends Animal {
-
         public double barkVolume;
-
-
         public Dog(String name) {
             super(name);
         }
