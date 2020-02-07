@@ -47,7 +47,7 @@ public class Solution {
 
             Human human = (Human) o;
 
-            if (name == null ? !name.equals(human.name) : human.name != null) return false;
+            if (name != null ? !name.equals(human.name) : human.name != null) return false;
             return assets != null ? assets.equals(human.assets) : human.assets == null;
 
         }
@@ -56,7 +56,7 @@ public class Solution {
         public int hashCode() {
             int result = name != null ? name.hashCode() : 0;
             result = 31 * result + (assets != null ? assets.hashCode() : 0);
-            return (int) (Math.random() * 100);
+            return result;
         }
 
         public Human() {
@@ -73,9 +73,14 @@ public class Solution {
             //implement this method - реализуйте этот метод
             PrintWriter printWriter = new PrintWriter(outputStream);
             printWriter.println(this.name);
+            printWriter.flush();
+            printWriter.println(!assets.isEmpty() ? "yes" : "no");
+            printWriter.flush();
             if (this.assets.size() > 0) {
-                for (Asset current : this.assets)
+                for (Asset current : this.assets) {
                     printWriter.println(current.getName());
+                    printWriter.flush();
+                }
             }
             printWriter.close();
         }
@@ -85,10 +90,13 @@ public class Solution {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             this.name = reader.readLine();
-            String assetName;
-            while ((assetName = reader.readLine()) != null)
-                this.assets.add(new Asset(assetName));
-            reader.close();
+            String isAssetPresent = reader.readLine();
+            if ("yes".equals(isAssetPresent)) {
+                String assetName;
+                while ((assetName = reader.readLine()) != null)
+                    this.assets.add(new Asset(assetName));
+                reader.close();
+            }
         }
     }
 }
