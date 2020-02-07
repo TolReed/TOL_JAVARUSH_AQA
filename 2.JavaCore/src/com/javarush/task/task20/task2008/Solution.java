@@ -26,6 +26,7 @@ public class Solution implements Serializable {
         System.out.println("Проверка singleton1 : " + singleton1);
     }
 
+
     public static ByteArrayOutputStream serializeSingletonInstance(Singleton instance) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
