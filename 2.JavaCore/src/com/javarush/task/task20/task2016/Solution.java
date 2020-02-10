@@ -1,10 +1,12 @@
 package com.javarush.task.task20.task2016;
 
-/* 
+import java.io.Serializable;
+
+/*
 Минимум изменений
 */
-public class Solution { //https://javarush.ru/help/10267 https://javarush.ru/help/3995
-    public class A {
+public class Solution {
+    public class A implements Serializable {
         String name = "A";
 
         public A(String name) {
@@ -36,6 +38,5 @@ public class Solution { //https://javarush.ru/help/10267 https://javarush.ru/hel
     }
 
     public static void main(String[] args) {
-
     }
 }
