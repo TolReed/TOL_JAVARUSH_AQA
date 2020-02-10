@@ -4,9 +4,9 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-Слабые ссылки
-*/
+/* Слабые ссылки */
+
+
 public class Solution {
     public static Helper helper = new Helper();
 
