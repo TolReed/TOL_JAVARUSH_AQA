@@ -1,15 +1,10 @@
 package com.javarush.task.task34.task3412;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.Date;
-
-/* 
+/*
 Добавление логирования в класс
 */
 
-public class Solution {
+/*public class Solution {
     private static final Logger logger = LoggerFactory.getLogger(Solution.class);
 
     private int value1;
@@ -65,4 +60,4 @@ public class Solution {
     public void setValue3(Date value3) {
         this.value3 = value3;
     }
-}
+}*/
