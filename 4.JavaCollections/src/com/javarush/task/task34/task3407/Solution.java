@@ -7,16 +7,6 @@ import java.util.List;
 
 /* 
 Призрачные ссылки
-Разберись в примере.
-Реализуй логику метода getFilledList класса Helper:
-1) создай список, который сможет хранить призрачные ссылки на объекты Monkey
-2) добавь в список 200 ссылок, используйте очередь helper.getQueue()
-3) верни заполненный список
-Требования:
-1. Метод getFilledList должен возвращать список заполненный фантомными ссылками на объекты типа Monkey.
-2. Метод getFilledList должен возвращать список из 200 элементов.
-3. Класс Helper не должен быть приватным.
-4. Метод getFilledList не должен быть приватным.
 */
 public class Solution {
     public static Helper helper = new Helper();
@@ -85,14 +75,11 @@ public class Solution {
         }
 
         public List<PhantomReference<Monkey>> getFilledList() {
-            //список призрачных ссылок
-            ArrayList<PhantomReference<Monkey>> list = new ArrayList<PhantomReference<Monkey>>();
-            //создаем 200 объектов и добавляем их в список через призрачные ссылки
-            for ( int i = 0; i < 200; i++) {
-                Monkey monkey = new Monkey();
-                list.add(new PhantomReference (monkey, queue));
+            List<PhantomReference<Monkey>> phantomReferences = new ArrayList<>();
+            for (int i = 0; i < 200; i++) {
+                phantomReferences.add(new PhantomReference<>(new Monkey(), helper.getQueue()));
             }
-            return list;
+            return phantomReferences;
         }
 
         public void finish() throws InterruptedException {
