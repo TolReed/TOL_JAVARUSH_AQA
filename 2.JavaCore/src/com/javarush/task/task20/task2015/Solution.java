@@ -36,7 +36,6 @@ public class Solution implements Serializable, Runnable{
             e.printStackTrace();
         }
     }
-
     /**
      Переопределяем сериализацию.
      Для этого необходимо объявить методы:
