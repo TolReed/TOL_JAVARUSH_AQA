@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 
 public class HashMapReflectionHelper {
-    public static  <T> T callHiddenMethod(HashMap map, String methodName) {
+    public static <T> T callHiddenMethod(HashMap map, String methodName) {
         try {
             Method method = map.getClass().getDeclaredMethod(methodName);
             method.setAccessible(true);
