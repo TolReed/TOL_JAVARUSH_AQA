@@ -17,7 +17,7 @@ public class Solution {
         String firstName;
         String lastName;
         transient String fullName;
-        transient final String greetingString;
+        transient final String greeting;
         String country;
         Sex sex;
         transient PrintStream outputStream;
@@ -27,7 +27,7 @@ public class Solution {
             this.firstName = firstName;
             this.lastName = lastName;
             this.fullName = String.format("%s, %s", lastName, firstName);
-            this.greetingString = "Hello, ";
+            this.greeting= "Hello, ";
             this.country = country;
             this.sex = sex;
             this.outputStream = System.out;
@@ -50,6 +50,6 @@ public class Solution {
         ObjectInputStream in = new ObjectInputStream(new FileInputStream("person.out"));
         Person person1 = (Person) in.readObject();
         in.close();
-        System.out.println(person.greetingString);
+        System.out.println(person.greeting);
     }
 }
