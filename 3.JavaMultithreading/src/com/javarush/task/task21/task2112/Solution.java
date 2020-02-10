@@ -1,6 +1,6 @@
 package com.javarush.task.task21.task2112;
 
-public class Solution {
+/*public class Solution {
     public static void main(String[] args) {
         DBConnectionManager dbConnectionManager = new DBConnectionManager();
         try (FakeConnection fakeConnection = dbConnectionManager.getFakeConnection()) {
@@ -8,4 +8,4 @@ public class Solution {
         } catch (Exception e) {
         }
     }
-}
+}*/

@@ -3,7 +3,7 @@ package com.javarush.task.task21.task2108;
 /* 
 Клонирование растений
 */
-public class Solution {
+/*public class Solution {
     public static void main(String[] args) {
         Tree tree = new Tree("willow", new String[]{"s1", "s2", "s3", "s4"});
         Tree clone = null;
@@ -44,4 +44,4 @@ public class Solution {
             return branches;
         }
     }
-}
+}*/

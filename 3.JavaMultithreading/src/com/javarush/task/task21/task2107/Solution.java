@@ -1,12 +1,9 @@
 package com.javarush.task.task21.task2107;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-/* 
+/*
 Глубокое клонирование карты
 */
-public class Solution {
+/*public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -37,4 +34,4 @@ public class Solution {
             this.name = name;
         }
     }
-}
+}*/
