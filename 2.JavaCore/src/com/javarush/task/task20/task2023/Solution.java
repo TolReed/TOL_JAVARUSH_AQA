@@ -2,6 +2,8 @@ package com.javarush.task.task20.task2023;
 
 /* 
 Делаем правильный вывод
+
+Read Me! http://pr0java.blogspot.com/2015/07/blog-post_66.html
 */
 public class Solution {
     public static void main(String[] s) {
@@ -10,17 +12,19 @@ public class Solution {
     }
 
     public static class A {
-        public void method1() {
+        private void method1() {
             System.out.println("A class, method1");
         }
 
         public void method2() {
             System.out.println("A class, method2");
+            method1();
         }
     }
 
     public static class B extends A {
         public void method1() {
+            super.method2();
             System.out.println("B class, method1");
         }
 
@@ -36,6 +40,8 @@ public class Solution {
 
         public void method2() {
             System.out.println("C class, method2");
+            super.method1();
         }
     }
 }
+
