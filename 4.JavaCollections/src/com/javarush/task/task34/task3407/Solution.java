@@ -5,7 +5,7 @@ import java.lang.ref.ReferenceQueue;
 import java.util.ArrayList;
 import java.util.List;
 
-/* 
+/*
 Призрачные ссылки
 */
 public class Solution {
@@ -16,7 +16,7 @@ public class Solution {
 
     public static void main(String args[]) throws InterruptedException {
         helper.startTime();
-        List<PhantomReference<Monkey>> list = helper.getFilledList();
+        List<PhantomReference<Monkey>> list = helper.getPopulatedList ();
 
         //before GC
         helper.checkListWithReferences(list, "before");
@@ -74,12 +74,14 @@ public class Solution {
             System.out.println(String.format("The enqueue reference count is %d (%s GC was called)", count, string));
         }
 
-        public List<PhantomReference<Monkey>> getFilledList() {
-            List<PhantomReference<Monkey>> phantomReferences = new ArrayList<>();
+        public List<PhantomReference<Monkey>> getPopulatedList () {
+            List<PhantomReference<Monkey>> list = new ArrayList<>();
+
             for (int i = 0; i < 200; i++) {
-                phantomReferences.add(new PhantomReference<>(new Monkey(), helper.getQueue()));
+                Monkey monkey = new Monkey();
+                list.add(new PhantomReference<Monkey>(monkey, helper.queue));
             }
-            return phantomReferences;
+            return list;
         }
 
         public void finish() throws InterruptedException {
