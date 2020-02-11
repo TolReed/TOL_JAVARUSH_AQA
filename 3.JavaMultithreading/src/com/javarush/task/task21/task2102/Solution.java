@@ -8,16 +8,26 @@ import java.lang.reflect.Modifier;
 */
 public class Solution {
     public static void main(String[] args) {
-        int classModifiers = Solution.class.getModifiers();
-        System.out.println(isModifierSet(classModifiers, Modifier.PUBLIC));   //true
-        System.out.println(isModifierSet(classModifiers, Modifier.STATIC));   //false
+        int modifiersOfThisClass = Solution.class.getModifiers();
+        System.out.println(isModifierSet(modifiersOfThisClass, Modifier.PUBLIC));   //true
+        System.out.println(isModifierSet(modifiersOfThisClass, Modifier.STATIC));   //false
 
-        int methodModifiers = getMainMethod().getModifiers();
-        System.out.println(isModifierSet(methodModifiers, Modifier.STATIC));      //true
+        int modifiersOfMethod = getMainMethod().getModifiers();
+        System.out.println(isModifierSet(modifiersOfMethod, Modifier.STATIC));      //true
     }
 
     public static boolean isModifierSet(int allModifiers, int specificModifier) {
-        return false;
+        boolean result = false;
+        switch (specificModifier) {
+            case Modifier.PUBLIC: {
+                result = Modifier.isPublic(allModifiers);
+            }
+            break;
+            case Modifier.STATIC: {
+                result = Modifier.isStatic(allModifiers);
+            }
+        }
+        return result;
     }
 
     private static Method getMainMethod() {
@@ -29,3 +39,4 @@ public class Solution {
         return null;
     }
 }
+
