@@ -2,6 +2,13 @@ package com.javarush.task.task23.task2310;
 
 /* 
 Напряги извилины!
+Метод printName должен выводить свое собственное имя, т.е. «sout»
+Сделайте минимум изменений.
+Требования:
+1. Вывод на экран должен соответствовать условию.
+2. В классе Solution должен присутствовать метод sout без параметров.
+3. В классе Solution должно присутствовать поле name.
+4. Модификатор доступа метода getName должен быть расширен.
 */
 public class Solution {
     private String name;
@@ -10,7 +17,8 @@ public class Solution {
         this.name = name;
     }
 
-    private String getName() {
+    //private не наследуется и не переопределяется
+    public String getName() {
         return name;
     }
 
@@ -23,6 +31,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution("Риша").sout();
+        new Solution("main").sout();
     }
 }
