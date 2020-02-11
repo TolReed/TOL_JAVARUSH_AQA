@@ -1,5 +1,7 @@
 package com.javarush.task.task24.task2408;
 
+import java.util.Date;
+
 /*
 В работе вам иногда будет нужно закастить класс к какому-нибудь другому классу, не интерфейсу :)))
 Класс DogPet использует 2 класса - SuperDog и Dog, разберись с getName в классе DogPet
@@ -41,7 +43,35 @@ public class Dog implements Pet {
      * @param i количество букв 'а' в слове гав
      * @return экземпляр класса DogPet
      */
+
+
     public Sayable toSayable(final int i) {
-       return null;
+        class DogPet extends SuperDog implements Sayable {
+
+            private String getName() {
+                return getSuperQuotes() + name + getSuperQuotes();
+            }
+
+            @Override
+            public String say() {
+                String result;
+                if (i < 1) {
+                    result = getName() + " спит.";
+                } else {
+                    StringBuilder sb = new StringBuilder(
+                            String.format("%s лает г", getName())
+                    );
+                    for (int ind = 0; ind < i; ind++) {
+                        sb.append('а');
+                    }
+                    sb.append("в!").append(" ")
+                            .append(formatter.format(new Date()));
+                    result = sb.toString();
+                }
+                return result;
+            }
+        }
+        return new DogPet();
     }
+
 }
