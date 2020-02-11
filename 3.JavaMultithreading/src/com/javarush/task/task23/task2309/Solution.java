@@ -33,8 +33,8 @@ Id=1, name='Location-1', description=Got by executing 'SELECT * FROM LOCATION'
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        print(solution.getUsers());
-        print(solution.getLocations());
+        /*print(solution.getUsers());
+        print(solution.getLocations());*/
     }
 
     public static void print(List list) {
@@ -45,7 +45,7 @@ public class Solution {
         }
     }
 
-    public List<User> getUsers(){
+    /*public List<User> getUsers(){
         return new AbstractDbSelectExecutor<User>() {
             @Override
             public String getQuery() {
@@ -82,5 +82,5 @@ public class Solution {
             public String getQuery() {
                 return "SELECT * FROM SUBSCRIPTION";}
         }.execute();
-    }
+    }*/
 }
